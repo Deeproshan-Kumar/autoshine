@@ -107,7 +107,7 @@ export function initScrollAnimations() {
   revealGroup(".section-header");
 
   // About section
-  revealGroup(".about img");
+  revealGroup(".about img", { scale: 0.94, y: 16 });
   revealGroup(".about .col-lg-6:last-child > p", { y: 24, duration: 0.7 });
   revealGroup(".about .contact-handle", {
     y: 24,
@@ -130,9 +130,21 @@ export function initScrollAnimations() {
   waveReveal(".our-latest-works .cards.row", ":scope > div");
   waveReveal(".offers-swiper .swiper-wrapper", ":scope > .swiper-slide");
   waveReveal(".our-amenities .amenities", ":scope > div");
-  waveReveal(".customer-experiences .row.gy-4", ":scope > div");
+  revealGroup(".customer-experiences .row.gy-4 > div:first-child img", {
+    scale: 0.94,
+    y: 0,
+  });
+  revealGroup(".customer-experiences .row.gy-4 > div:last-child", {
+    x: 32,
+    y: 0,
+  });
+  waveReveal(".customer-experiences .row.mt-2", ":scope > div", {
+    y: 32,
+    skewY: 0,
+  });
   waveReveal(".how-we-works .row.gy-4", ":scope > div");
-  waveReveal(".blogs .cards.row", ":scope > div");
+  waveReveal(".testimonial-swiper .swiper-wrapper", ":scope > .swiper-slide");
+  waveReveal(".blogs .col-lg-7 > .d-flex", ":scope > article");
 
   // Text anim — letters wave in
   waveTextReveal(".text-anim .anim-txt");
@@ -145,6 +157,7 @@ export function initScrollAnimations() {
 
   // FAQs
   revealGroup(".faqs .accordion-item", { y: 24 });
+  revealGroup(".faqs .faq-visual > img", { scale: 0.94, y: 0 });
 
   // Fullwidth CTA
   revealGroup(".fullwidth-cta .wrapper", { x: -32, y: 0 });

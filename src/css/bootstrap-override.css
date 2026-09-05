@@ -1,0 +1,184 @@
+/* -------------------------------------------------- *
+ * Bootstrap component overrides
+ * Loaded after Bootstrap, before main.css.
+ * Colours come from the theme tokens in main.css, so
+ * every component follows light / dark automatically.
+ * -------------------------------------------------- */
+
+.text-primary {
+  color: var(--clr-primary) !important;
+}
+
+.text-body {
+  color: var(--clr-text);
+}
+
+.text-black {
+  color: var(--clr-black) !important;
+}
+
+.text-white {
+  color: var(--clr-white) !important;
+}
+
+.text-bg-primary {
+  background-color: var(--clr-primary) !important;
+}
+
+.text-decoration-underline {
+  text-underline-offset: 0.25rem;
+}
+
+.bg-primary {
+  background-color: var(--clr-primary) !important;
+}
+
+.bg-surface {
+  background-color: var(--clr-surface);
+}
+
+.bg-surface-2 {
+  background-color: var(--clr-surface-2);
+}
+
+.bg-dark-surface {
+  background-color: var(--clr-dark-surface);
+}
+
+.border-b-primary-4 {
+  border-bottom: 0.25rem solid var(--clr-primary);
+}
+
+.btn {
+  position: relative;
+  background: transparent !important;
+  padding: 0.1rem !important;
+  overflow: hidden;
+  border: 0;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: conic-gradient(transparent, 270deg, var(--clr-black), transparent);
+  transition: transform 300ms ease-in-out;
+}
+
+.btn:hover::before {
+  transform: rotate(180deg);
+}
+
+.btn>span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 0;
+}
+
+.btn-primary>span {
+  background-color: var(--clr-primary);
+}
+
+.btn-secondary>span {
+  background-color: var(--clr-white);
+}
+
+.navbar-toggler {
+  color: var(--clr-black) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.btn[data-size="sm"]>span {
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+
+.btn[data-size="md"]>span {
+  height: 2.5rem;
+  font-size: 0.875rem;
+  padding: 0.625rem;
+}
+
+.btn[data-size="lg"]>span {
+  font-size: 1rem;
+  padding: 0.75rem;
+}
+
+.btn[data-size="fit"]>span {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mx-n2 {
+  margin-inline: -0.5rem;
+}
+
+.border-1 {
+  border: 0.1rem solid var(--clr-border);
+}
+
+.card .tags .tag {
+  background-color: #fb2c3625;
+  padding: 0.25rem;
+}
+
+.accordion-button {
+  color: var(--clr-black);
+  font-weight: 700;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fb2c3625 !important;
+  color: var(--clr-primary) !important;
+}
+
+.accordion-button::after {
+  background-position: center;
+  background-size: 1rem;
+}
+
+[data-bs-theme="dark"] .accordion-button::after {
+  filter: invert(1) brightness(200);
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-item {
+  background-color: var(--clr-surface);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color) !important;
+}
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 97.5rem;
+  }
+}

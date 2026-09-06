@@ -171,14 +171,40 @@
   border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color) !important;
 }
 
-@media (min-width: 1400px) {
+.container {
+  padding-inline: 1rem;
+}
 
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 97.5rem;
+@media (min-width: 40rem) {
+  .container {
+    max-width: 40rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .container {
+    max-width: 51rem;
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .container {
+    max-width: 63rem;
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .container {
+    max-width: 80rem;
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 96rem) {
+  .container {
+    max-width: 97rem;
+    padding-inline: 0.5rem;
   }
 }

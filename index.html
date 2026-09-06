@@ -31,6 +31,46 @@
 
   <!-- Site Header -->
   <header class="site-header" id="site-header">
+    <div class="announcement-bar bg-primary">
+      <div class="container py-1 py-lg-2">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-lg-6">
+            <ul
+              class="list-unstyled d-flex justify-content-between justify-content-lg-center justify-content-lg-start align-items-center gap-4 text-sm mb-0">
+              <li class="action mail">
+                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="mail"></ion-icon>contact@autoshine.com</a>
+              </li>
+              <li class="action readonly">
+                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri : 09:00am - 08:00pm
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-lg-6">
+            <ul
+              class="list-unstyled d-flex justify-content-between justify-content-lg-center justify-content-lg-end align-items-center justify-content-end gap-4 text-sm mb-0">
+              <li class="action call">
+                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="call"></ion-icon>+91
+                  1234567890</a>
+              </li>
+              <li class="action switch-lang">
+                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
+                <select name="lang" id="lang" class="lang">
+                  <option value="en" selected>EN</option>
+                </select>
+              </li>
+              <li class="action login">
+                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="person"></ion-icon>Login</a>
+              </li>
+              <li class="action register">
+                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="person"></ion-icon>Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav class="navbar navbar-expand-lg">
       <div class="container py-lg-2">
         <a class="navbar-brand fs-4 fw-semibold me-0" href="index.html">
@@ -244,7 +284,7 @@
             </p>
             <ul class="list-unstyled d-flex flex-wrap mb-0 mx-n2">
               <li class="contact-handle h-auto p-2">
-                <div class="position-relative border-1 bg-surface-2 rounded-1 p-2">
+                <div class="position-relative border-1 bg-surface-2 backdrop-blur-10 rounded-1 p-2">
                   <p class="text-xs text-uppercase tracking-wide mb-1 px-1">
                     Our Job
                   </p>
@@ -255,13 +295,13 @@
                 </div>
               </li>
               <li class="contact-handle h-auto p-2">
-                <div class="position-relative border-1 bg-surface-2 rounded-1 p-2">
+                <div class="position-relative border-1 bg-surface-2 backdrop-blur-10 rounded-1 p-2">
                   <p class="text-xs text-uppercase tracking-wide mb-1 px-1">
                     Email
                   </p>
                   <h3 class="position-relative fs-6 d-flex align-items-center gap-2 mb-0 p-1">
                     <ion-icon name="mail"></ion-icon>
-                    <span id="about-email">hello@autoshine.uae</span>
+                    <span id="about-email">hello@autoshine.com</span>
                   </h3>
                   <button class="position-absolute top-0 end-0 border-0 bg-transparent p-2" type="button"
                     data-copy-target="#about-email" aria-label="Copy email address" title="Copy email address">
@@ -270,7 +310,7 @@
                 </div>
               </li>
               <li class="contact-handle h-auto p-2">
-                <div class="position-relative border-1 bg-surface-2 rounded-1 p-2">
+                <div class="position-relative border-1 bg-surface-2 backdrop-blur-10 rounded-1 p-2">
                   <p class="text-xs text-uppercase tracking-wide mb-1 px-1">
                     Phone
                   </p>
@@ -285,7 +325,7 @@
                 </div>
               </li>
               <li class="contact-handle h-auto p-2">
-                <div class="position-relative border-1 bg-surface-2 rounded-1 p-2">
+                <div class="position-relative border-1 bg-surface-2 backdrop-blur-10 rounded-1 p-2">
                   <p class="text-xs text-uppercase tracking-wide mb-1 px-1">
                     Location
                   </p>
@@ -324,7 +364,7 @@
                     class="icon-lg position-absolute top-50 start-0 bg-primary d-flex justify-content-center align-items-center rounded-circle">
                     <ion-icon class="text-light" name="construct"></ion-icon>
                   </div>
-                  <article class="bg-surface-2 border-1 rounded-1 p-4">
+                  <article class="bg-surface-2 backdrop-blur-10 border-1 rounded-1 p-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-lg-1">
                       <h4 class="mb-0">The beginning</h4>
                       <span
@@ -348,7 +388,7 @@
                     class="icon-lg position-absolute top-50 start-0 bg-primary d-flex justify-content-center align-items-center rounded-circle">
                     <ion-icon class="text-light" name="construct"></ion-icon>
                   </div>
-                  <article class="bg-surface-2 border-1 rounded-1 p-4">
+                  <article class="bg-surface-2 backdrop-blur-10 border-1 rounded-1 p-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-lg-1">
                       <h4 class="mb-0">Building expertise</h4>
                       <span
@@ -372,7 +412,7 @@
                     class="icon-lg position-absolute top-50 start-0 bg-primary d-flex justify-content-center align-items-center rounded-circle">
                     <ion-icon class="text-light" name="construct"></ion-icon>
                   </div>
-                  <article class="bg-surface-2 border-1 rounded-1 p-4">
+                  <article class="bg-surface-2 backdrop-blur-10 border-1 rounded-1 p-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-lg-1">
                       <h4 class="mb-0">Growing the experience</h4>
                       <span
@@ -396,7 +436,7 @@
                     class="icon-lg position-absolute top-50 start-0 bg-primary d-flex justify-content-center align-items-center rounded-circle">
                     <ion-icon class="text-light" name="construct"></ion-icon>
                   </div>
-                  <article class="bg-surface-2 border-1 rounded-1 p-4">
+                  <article class="bg-surface-2 backdrop-blur-10 border-1 rounded-1 p-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-lg-1">
                       <h4 class="mb-0">Looking ahead</h4>
                       <span
@@ -427,7 +467,7 @@
                     class="icon-lg position-absolute top-50 start-0 bg-primary d-flex justify-content-center align-items-center rounded-circle">
                     <ion-icon class="text-light" name="construct"></ion-icon>
                   </div>
-                  <article class="bg-surface-2 border-1 rounded-1 p-4">
+                  <article class="bg-surface-2 backdrop-blur-10 border-1 rounded-1 p-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-lg-1">
                       <h4 class="mb-0">Quality first</h4>
                       <span
@@ -451,7 +491,7 @@
                     class="icon-lg position-absolute top-50 start-0 bg-primary d-flex justify-content-center align-items-center rounded-circle">
                     <ion-icon class="text-light" name="construct"></ion-icon>
                   </div>
-                  <article class="bg-surface-2 border-1 rounded-1 p-4">
+                  <article class="bg-surface-2 backdrop-blur-10 border-1 rounded-1 p-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-lg-1">
                       <h4 class="mb-0">Customer comfort</h4>
                       <span
@@ -475,7 +515,7 @@
                     class="icon-lg position-absolute top-50 start-0 bg-primary d-flex justify-content-center align-items-center rounded-circle">
                     <ion-icon class="text-light" name="construct"></ion-icon>
                   </div>
-                  <article class="bg-surface-2 border-1 rounded-1 p-4">
+                  <article class="bg-surface-2 backdrop-blur-10 border-1 rounded-1 p-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-lg-1">
                       <h4 class="mb-0">Women empowerment</h4>
                       <span
@@ -499,7 +539,7 @@
                     class="icon-lg position-absolute top-50 start-0 bg-primary d-flex justify-content-center align-items-center rounded-circle">
                     <ion-icon class="text-light" name="construct"></ion-icon>
                   </div>
-                  <article class="bg-surface-2 border-1 rounded-1 p-4">
+                  <article class="bg-surface-2 backdrop-blur-10 border-1 rounded-1 p-4">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2 pb-lg-1">
                       <h4 class="mb-0">Trust and transparency</h4>
                       <span
@@ -622,6 +662,105 @@
       </div>
     </section>
 
+    <!-- Popular Services -->
+    <section class="section popular-services" id="popular-services">
+      <div class="container py-4 py-lg-5">
+        <div class="section-header text-center mx-auto mb-5">
+          <h2 class="d-inline-block position-relative pb-2">Popular Services On Recommendation</h2>
+          <p class="mb-0">Versatile treatments chosen by Dubai drivers for everyday care and lasting shine.</p>
+        </div>
+        <div class="swiper popular-services-swiper">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide popular-car-item">
+              <p class="popular-car-item__brand">Audi</p>
+              <h3 class="display-1">A3 2026 New</h3>
+              <div class="popular-car-item__image mb-3">
+                <img src="public/images/audi-a3.webp" class="img-fluid" alt="Signature car detailing">
+                <div class="popular-car-item__amount p-2"><span class="text-sm">Starts From</span><strong>AED 350
+                    <small>/
+                      service</small></strong></div>
+              </div>
+              <div class="popular-car-item__specs mb-3">
+                <span><ion-icon name="sparkles"></ion-icon> Deep clean</span>
+                <span><ion-icon name="color-wand"></ion-icon> Paint polish</span>
+                <span><ion-icon name="shield-checkmark"></ion-icon> Protection</span>
+                <span><ion-icon name="car-sport"></ion-icon> All vehicles</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary">
+                <span>Book Now <ion-icon class="ms-1" name="arrow-forward"></ion-icon></span>
+              </a>
+            </article>
+            <article class="swiper-slide popular-car-item">
+              <p class="popular-car-item__brand">Toyota</p>
+              <h3 class="display-1">CAMREY SE 350</h3>
+              <div class="popular-car-item__image mb-3">
+                <img src="public/images/camrey.png" class="img-fluid" alt="Ceramic paint coating">
+                <div class="popular-car-item__amount p-2"><span class="text-sm">Starts From</span><strong>AED 1,450
+                    <small>/
+                      service</small></strong></div>
+              </div>
+              <div class="popular-car-item__specs mb-3">
+                <span><ion-icon name="water"></ion-icon> Hydrophobic</span>
+                <span><ion-icon name="sunny"></ion-icon> UV resistant</span>
+                <span><ion-icon name="sparkles"></ion-icon> High gloss</span>
+                <span><ion-icon name="time"></ion-icon> Long lasting</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary">
+                <span>Book Now <ion-icon class="ms-1" name="arrow-forward"></ion-icon></span>
+              </a>
+            </article>
+            <article class="swiper-slide popular-car-item">
+              <p class="popular-car-item__brand">Ford</p>
+              <h3 class="display-1">MUSTUNG</h3>
+              <div class="popular-car-item__image mb-3">
+                <img src="public/images/mustung.webp" class="img-fluid" alt="Paint polishing service">
+                <div class="popular-car-item__amount p-2"><span class="text-sm">Starts From</span><strong>AED 600
+                    <small>/
+                      service</small></strong></div>
+              </div>
+              <div class="popular-car-item__specs mb-3">
+                <span><ion-icon name="sunny"></ion-icon> Paint correction</span>
+                <span><ion-icon name="color-wand"></ion-icon> Swirl removal</span>
+                <span><ion-icon name="sparkles"></ion-icon> Gloss finish</span>
+                <span><ion-icon name="car-sport"></ion-icon> All vehicles</span>
+              </div>
+              <a href="contact.html" class="btn btn-primary">
+                <span>Book Now <ion-icon class="ms-1" name="arrow-forward"></ion-icon></span>
+              </a>
+            </article>
+          </div>
+          <div class="popular-services-nav d-flex justify-content-center gap-2 mt-4">
+            <button type="button" class="btn btn-primary popular-services-prev"
+              aria-label="Previous popular service"><span><ion-icon name="arrow-back"></ion-icon></span></button>
+            <button type="button" class="btn btn-primary popular-services-next"
+              aria-label="Next popular service"><span><ion-icon name="arrow-forward"></ion-icon></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Marquee -->
+    <section class="service-marquee" aria-label="AutoShine services">
+      <div class="service-marquee__viewport">
+        <div class="service-marquee__track">
+          <div class="service-marquee__group">
+            <span>INTERIOR</span><i></i>
+            <span>INSTALLATION</span><i></i>
+            <span>COLOR CORRECTION</span><i></i>
+            <span>CUSTOM VINYLE</span><i></i>
+            <span>DETAILING</span><i></i>
+          </div>
+          <div class="service-marquee__group" aria-hidden="true">
+            <span>INTERIOR</span><i></i>
+            <span>INSTALLATION</span><i></i>
+            <span>COLOR CORRECTION</span><i></i>
+            <span>CUSTOM VINYLE</span><i></i>
+            <span>DETAILING</span><i></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Our Services -->
     <section class="section our-services" id="our-services">
       <div class="container py-4 py-lg-5">
@@ -641,7 +780,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Car Detailing</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Car Detailing</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 450</s> <strong>AED
+                        350</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 550</s> <strong>AED
+                        425</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 700</s> <strong>AED
+                        550</strong></span></div>
+                </div>
                 <p class="text-sm">Complete interior and exterior cleaning to restore your car's shine and
                   freshness.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -675,7 +822,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Paint Protection Film</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Paint Protection Film</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 5,500</s> <strong>AED
+                        4,400</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 7,000</s> <strong>AED
+                        5,600</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 8,500</s> <strong>AED
+                        6,800</strong></span></div>
+                </div>
                 <p class="text-sm">A durable protective film that helps guard your paint against scratches, chips,
                   and road debris.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -695,8 +850,10 @@
                   <div class="col-6">
                     <p class="text-sm text-lg-end mb-0"><ion-icon name="layers"></ion-icon> 6 Installments</p>
                   </div>
-                </div><a href="#" class="btn btn-primary w-100"><span>Book Now <ion-icon class="ms-1"
-                      name="arrow-forward"></ion-icon></span></a>
+                </div>
+                <a href="#" class="btn btn-primary w-100">
+                  <span>Book Now <ion-icon class="ms-1" name="arrow-forward"></ion-icon></span>
+                </a>
               </div>
             </article>
           </li>
@@ -710,7 +867,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Full Car Painting</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Full Car Painting</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 7,500</s> <strong>AED
+                        6,000</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 9,000</s> <strong>AED
+                        7,200</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 11,000</s> <strong>AED
+                        8,800</strong></span></div>
+                </div>
                 <p class="text-sm">Professional full-body repainting to refresh your vehicle's appearance with a
                   smooth finish.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -743,7 +908,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Panel Painting</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Panel Painting</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 650</s> <strong>AED
+                        520</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 800</s> <strong>AED
+                        640</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 950</s> <strong>AED
+                        760</strong></span></div>
+                </div>
                 <p class="text-sm">Restore individual damaged or faded panels with professional color matching and
                   finishing.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -777,7 +950,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Scratch &amp; Dent Repair</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Scratch &amp; Dent Repair</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 550</s> <strong>AED
+                        440</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 700</s> <strong>AED
+                        560</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 850</s> <strong>AED
+                        680</strong></span></div>
+                </div>
                 <p class="text-sm">Repair minor scratches, dents, and surface damage to bring your bodywork back to
                   its best.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -810,7 +991,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Color Change</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Color Change</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 8,500</s> <strong>AED
+                        6,800</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 10,500</s> <strong>AED
+                        8,400</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 13,000</s> <strong>AED
+                        10,400</strong></span></div>
+                </div>
                 <p class="text-sm">Transform your vehicle with a new color and a professional, factory-style
                   finish.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -845,7 +1034,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Paint Protection Coating</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Paint Protection Coating</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 1,800</s> <strong>AED
+                        1,450</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 2,300</s> <strong>AED
+                        1,850</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 2,800</s> <strong>AED
+                        2,250</strong></span></div>
+                </div>
                 <p class="text-sm">Add a protective coating that enhances gloss while helping shield your paint
                   from everyday elements.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -880,7 +1077,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Polishing &amp; Buffing</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Polishing &amp; Buffing</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 750</s> <strong>AED
+                        600</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 950</s> <strong>AED
+                        760</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 1,150</s> <strong>AED
+                        920</strong></span></div>
+                </div>
                 <p class="text-sm">Remove light imperfections and restore depth, clarity, and shine to your
                   vehicle's paint.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -914,7 +1119,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Bumper &amp; Plastic Part Painting</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Bumper &amp; Plastic Part Painting</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 500</s> <strong>AED
+                        400</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 650</s> <strong>AED
+                        520</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 800</s> <strong>AED
+                        640</strong></span></div>
+                </div>
                 <p class="text-sm">Refresh faded or damaged bumpers and plastic parts with a clean, durable paint
                   finish.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -949,7 +1162,15 @@
                 <img src="public/images/service-placeholder.jpg" class="img-fluid" alt="Service Image">
               </div>
               <div class="card-body">
-                <h6 class="mb-2">Custom Painting</h6>
+                <div class="service-pricing bg-surface-2 border-1 mb-3">
+                  <h6 class="mb-2">Custom Painting</h6>
+                  <div class="pricing-row"><span>Small Vehicle</span><span><s>AED 10,000</s> <strong>AED
+                        8,000</strong></span></div>
+                  <div class="pricing-row"><span>Medium Vehicle</span><span><s>AED 12,500</s> <strong>AED
+                        10,000</strong></span></div>
+                  <div class="pricing-row"><span>Large Vehicle</span><span><s>AED 15,000</s> <strong>AED
+                        12,000</strong></span></div>
+                </div>
                 <p class="text-sm">Create a unique look with customized colors, finishes, and paint designs
                   tailored to your style.</p>
                 <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
@@ -976,6 +1197,57 @@
             </article>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Trusted Partners -->
+    <section class="section trusted-partners" id="trusted-partners">
+      <div class="container py-4 py-lg-5">
+        <div class="trusted-partners__track">
+          <img src="" class="img-fluid" height="50" width="125" alt="Partner 1">
+          <img src="" class="img-fluid" height="50" width="125" alt="Partner 2">
+          <img src="" class="img-fluid" height="50" width="125" alt="Partner 3">
+          <img src="" class="img-fluid" height="50" width="125" alt="Partner 4">
+          <img src="" class="img-fluid" height="50" width="125" alt="Partner 5">
+          <img src="" class="img-fluid" height="50" width="125" alt="Partner 6">
+          <img src="" class="img-fluid" height="50" width="125" alt="Partner 7">
+          <img src="" class="img-fluid" height="50" width="125" alt="Partner 8">
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Statistics -->
+    <section class="section service-statistics" id="service-statistics">
+      <div class="container py-4 py-lg-5">
+        <div class="row gy-4 gy-lg-0">
+          <div class="col-sm-12 col-lg-4">
+            <div class="d-flex justify-content-center align-items-start gap-2">
+              <div class="icon-box rounded-1"><ion-icon class="icon" name="settings"></ion-icon></div>
+              <div>
+                <p class="text-sm mb-0">WHEEL REPLACEMENT</p>
+                <h4 class="display-1 mb-0"><span class="counter" data-count="600">0</span>+</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="d-flex justify-content-center align-items-start gap-2">
+              <div class="icon-box rounded-1"><ion-icon class="icon" name="construct"></ion-icon></div>
+              <div>
+                <p class="text-sm mb-0">INTERIOR REMODELING</p>
+                <h4 class="display-1 mb-0"><span class="counter" data-count="250">0</span>+</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="d-flex justify-content-center align-items-start gap-2">
+              <div class="icon-box rounded-1"><ion-icon class="icon" name="color-wand"></ion-icon></div>
+              <div>
+                <p class="text-sm mb-0">COLOR CORRECTION</p>
+                <h4 class="display-1 mb-0"><span class="counter" data-count="456">0</span>+</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1132,17 +1404,17 @@
             <div class="swiper-slide">
               <article class="card offer position-relative h-100">
                 <div class="row gx-0">
-                  <div class="col-5 card-image">
+                  <div class="col-sm-12 col-lg-5 card-image">
                     <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image">
                     <span class="badge">34% Off</span>
                   </div>
-                  <div class="col-7 px-0">
+                  <div class="col-sm-12 col-lg-7 px-0">
                     <div class="card-body">
                       <h4>Complete Car Detail</h4>
                       <p>A complete interior and exterior detailing service to refresh your vehicle from top to bottom.
                       </p>
-                      <div class="offer-price mb-4"><span class="old-price">₹3499</span> <strong
-                          class="text-black">₹2,999</strong></div>
+                      <div class="offer-price mb-4"><span class="old-price">AED 349</span> <strong
+                          class="text-black">AED 299</strong></div>
                       <ul class="list-unstyled d-flex flex-column gap-1">
                         <li><ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon></ion-icon>
                           Exterior wash &amp;
@@ -1156,7 +1428,7 @@
                           &amp; glass care
                         </li>
                       </ul>
-                      <div class="row gx-0 countdown-timer">
+                      <div class="row gx-0 countdown-timer" data-countdown="2d 8h 30m">
                         <div class="col-3 screen"><span class="d-block text-center">02</span><span
                             class="d-block text-sm text-center">Days</span></div>
                         <div class="col-3 screen"><span class="d-block text-center">08</span><span
@@ -1178,16 +1450,16 @@
             <div class="swiper-slide">
               <article class="card offer position-relative h-100">
                 <div class="row gx-0">
-                  <div class="col-5 card-image">
+                  <div class="col-sm-12 col-lg-5 card-image">
                     <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image">
                     <span class="badge">25% Off</span>
                   </div>
-                  <div class="col-7 px-0">
+                  <div class="col-sm-12 col-lg-7 px-0">
                     <div class="card-body">
                       <h4>Premium Detailing</h4>
                       <p>Restore your vehicle's shine and protect its finish with our premium detailing package.</p>
-                      <div class="offer-price mb-4"><span class="old-price">₹4249</span> <strong
-                          class="text-black">₹3,999</strong></div>
+                      <div class="offer-price mb-4"><span class="old-price">AED 449</span> <strong
+                          class="text-black">AED 399</strong></div>
                       <ul class="list-unstyled d-flex flex-column gap-1">
                         <li><ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon> Full exterior
                           detailing
@@ -1199,7 +1471,7 @@
                         <li><ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon> Protective finish
                         </li>
                       </ul>
-                      <div class="row gx-0 countdown-timer">
+                      <div class="row gx-0 countdown-timer" data-countdown="4d 15h 45m 20s">
                         <div class="col-3 screen"><span class="d-block text-center">04</span><span
                             class="d-block text-sm text-center">Days</span></div>
                         <div class="col-3 screen"><span class="d-block text-center">15</span><span
@@ -1221,16 +1493,16 @@
             <div class="swiper-slide">
               <article class="card offer position-relative h-100">
                 <div class="row gx-0">
-                  <div class="col-5 card-image">
+                  <div class="col-sm-12 col-lg-5 card-image">
                     <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image">
                     <span class="badge">30% Off</span>
                   </div>
-                  <div class="col-7 px-0">
+                  <div class="col-sm-12 col-lg-7 px-0">
                     <div class="card-body">
                       <h4>Interior Refresh</h4>
                       <p>Give your car's cabin a clean and comfortable feel with our interior-focused package.</p>
-                      <div class="offer-price mb-4"><span class="old-price">₹4999</span> <strong
-                          class="text-black">₹4,449</strong></div>
+                      <div class="offer-price mb-4"><span class="old-price">AED 499</span> <strong
+                          class="text-black">AED 449</strong></div>
                       <ul class="list-unstyled d-flex flex-column gap-1">
                         <li><ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon> Seat &amp; carpet
                           cleaning</li>
@@ -1241,7 +1513,7 @@
                         <li><ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon> Odour treatment
                         </li>
                       </ul>
-                      <div class="row gx-0 countdown-timer">
+                      <div class="row gx-0 countdown-timer" data-countdown="6d 12h 20m 10s">
                         <div class="col-3 screen"><span class="d-block text-center">06</span><span
                             class="d-block text-sm text-center">Days</span></div>
                         <div class="col-3 screen"><span class="d-block text-center">12</span><span
@@ -1861,7 +2133,7 @@
     <section class="section blogs" id="blogs">
       <div class="container py-4 py-lg-5">
         <div class="row gy-4 gy-lg-0">
-          <div class="col-sm-12 col-lg-5">
+          <div class="col-sm-12 col-lg-5 blogs-intro">
             <div class="section-header text-center mx-auto mb-5 mb-lg-4">
               <h2 class="d-inline-block position-relative pb-2">
                 Latest Blogs
@@ -2053,9 +2325,9 @@
 
     <!-- Fullwidth CTA -->
     <section class="section fullwidth-cta" id="fullwidth-cta">
-      <div class="container">
-        <div class="row align-items-center gy-3 gy-lg-0">
-          <div class="col-sm-12 col-lg-8 py-4 py-lg-5">
+      <div class="container py-4 py-lg-0">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
             <div class="wrapper">
               <h2 class="cta-title">Give Your Car the Finish It Deserves.</h2>
               <p class="cta-description">
@@ -2064,12 +2336,20 @@
                 service today and drive away feeling like you just bought it
                 again.
               </p>
-              <a href="tel:+971505550184" class="btn btn-primary">
-                <span><ion-icon class="icon me-1" name="call"></ion-icon>Call Now</span>
+              <a href="tel:+971505550184" class="cta-btn">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="icon-box d-flex justify-content-center align-items-center">
+                    <ion-icon class="animate-pulse" name="call-sharp"></ion-icon>
+                  </div>
+                  <div>
+                    <p class="text-sm mb-1">We are available 24x7</p>
+                    <h4 class="text-primary mb-0">+1 123456789</h4>
+                  </div>
+                </div>
               </a>
             </div>
           </div>
-          <div class="col-sm-12 col-lg-4 text-lg-end">
+          <div class="col-sm-12 col-lg-4 text-center text-lg-end">
             <img src="public/images/cta-img.png" class="img-fluid cta-img" alt="CTA Image">
           </div>
         </div>
@@ -2081,6 +2361,13 @@
   <button class="btn btn-primary scroll-to-top-btn" id="scroll-to-top-btn" data-size="fit">
     <span>
       <ion-icon name="chevron-up"></ion-icon>
+    </span>
+  </button>
+
+  <!-- WhatsApp Button -->
+  <button class="btn btn-primary whatsapp-btn" id="whatsapp-btn" data-size="fit">
+    <span>
+      <ion-icon name="logo-whatsapp"></ion-icon>
     </span>
   </button>
 
@@ -2251,6 +2538,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- CountUp JS -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.9.0/dist/countUp.umd.js"></script>
   <!-- Main JS -->
   <script type="module" src="src/js/main.js"></script>
 </body>

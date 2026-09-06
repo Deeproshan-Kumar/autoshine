@@ -92,6 +92,29 @@ function waveTextReveal(containerSelector) {
   });
 }
 
+// Blog intro pin animation
+function pinBlogIntro() {
+  const intro = document.querySelector(".blogs-intro");
+  const section = document.querySelector(".blogs");
+
+  if (!intro || !section || window.matchMedia("(max-width: 991px)").matches)
+    return;
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top top+=96",
+    end: () => {
+      const scrollDistance = section.offsetHeight - intro.offsetHeight;
+      return `+=${Math.max(scrollDistance, 1)}`;
+    },
+    pin: intro,
+    pinSpacing: true,
+    anticipatePin: 1,
+    invalidateOnRefresh: true,
+  });
+}
+
+// Scroll animations
 export function initScrollAnimations() {
   if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
     return;
@@ -105,6 +128,13 @@ export function initScrollAnimations() {
 
   // Section headings across the page
   revealGroup(".section-header");
+  revealGroup(".popular-services .popular-car-item", { y: 32, duration: 0.8 });
+  revealGroup(".service-marquee", { y: 20, duration: 0.7 });
+  revealGroup(".trusted-partners .trusted-partners__track", {
+    y: 20,
+    duration: 0.7,
+  });
+  revealGroup(".service-statistics .col-lg-4", { y: 24, duration: 0.7 });
 
   // About section
   revealGroup(".about img", { scale: 0.94, y: 16 });
@@ -145,6 +175,7 @@ export function initScrollAnimations() {
   waveReveal(".how-we-works .row.gy-4", ":scope > div");
   waveReveal(".testimonial-swiper .swiper-wrapper", ":scope > .swiper-slide");
   waveReveal(".blogs .col-lg-7 > .d-flex", ":scope > article");
+  pinBlogIntro();
 
   // Text anim — letters wave in
   waveTextReveal(".text-anim .anim-txt");

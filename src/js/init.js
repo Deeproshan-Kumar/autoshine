@@ -72,6 +72,70 @@ export function initDateTime() {
   setInterval(update, 1000);
 }
 
+// Initialize offer countdown timers
+export function initOfferCountdowns() {
+  const timers = document.querySelectorAll(".countdown-timer[data-countdown]");
+  if (!timers.length) return;
+
+  timers.forEach((timer) => {
+    const duration = timer.dataset.countdown.match(/(\d+)\s*([dhms])/gi) || [];
+    const seconds = duration.reduce((total, part) => {
+      const [, value, unit] = part.match(/(\d+)\s*([dhms])/i);
+      const multipliers = { d: 86400, h: 3600, m: 60, s: 1 };
+      return total + Number(value) * multipliers[unit.toLowerCase()];
+    }, 0);
+    const endTime = Date.now() + seconds * 1000;
+    const values = timer.querySelectorAll(".screen span:first-child");
+
+    function update() {
+      const remaining = Math.max(0, endTime - Date.now());
+      const totalSeconds = Math.floor(remaining / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      [days, hours, minutes, seconds].forEach((value, index) => {
+        if (values[index])
+          values[index].textContent = String(value).padStart(2, "0");
+      });
+    }
+
+    update();
+    setInterval(update, 1000);
+  });
+}
+
+// Initialize statistics counters when the section enters the viewport
+export function initStatsCounters() {
+  const counters = document.querySelectorAll(".counter[data-count]");
+  if (!counters.length || !window.countUp) return;
+
+  const observer = new IntersectionObserver(
+    (entries, statsObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+        const animation = new countUp.CountUp(
+          counter,
+          Number(counter.dataset.count),
+          {
+            duration: 2.2,
+            useEasing: true,
+            separator: ",",
+          },
+        );
+
+        if (!animation.error) animation.start();
+        statsObserver.unobserve(counter);
+      });
+    },
+    { threshold: 0.35 },
+  );
+
+  counters.forEach((counter) => observer.observe(counter));
+}
+
 // Init tour video player function
 export function initTourVideoPlayer(videoCtrlBtn, video, videoCtrlIcon) {
   if (!videoCtrlBtn || !video || !videoCtrlIcon) return;
@@ -90,13 +154,16 @@ export function initTourVideoPlayer(videoCtrlBtn, video, videoCtrlIcon) {
 
 // Init testimonial swiper
 export function initTestimonialSwiper() {
-  const testimonialSwiper = new Swiper(".testimonial-swiper", {
+  const testimonialSwiper = document.querySelector(".testimonial-swiper");
+  if (!testimonialSwiper) return;
+
+  new Swiper(".testimonial-swiper", {
     slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
     speed: 800,
     autoplay: {
-      delay: 4000,
+      delay: 5000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
@@ -112,6 +179,10 @@ export function initTestimonialSwiper() {
     },
 
     breakpoints: {
+      375: {
+        slidesPerView: 1,
+      },
+
       576: {
         slidesPerView: 1,
       },
@@ -140,7 +211,7 @@ export function initOffersSwiper() {
     loop: true,
     speed: 800,
     autoplay: {
-      delay: 5000,
+      delay: 7000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
@@ -156,6 +227,10 @@ export function initOffersSwiper() {
     },
 
     breakpoints: {
+      375: {
+        slidesPerView: 1,
+      },
+
       576: {
         slidesPerView: 1,
       },
@@ -169,6 +244,29 @@ export function initOffersSwiper() {
         slidesPerView: 2,
         spaceBetween: 24,
       },
+    },
+  });
+}
+
+// Init popular services swiper
+export function initPopularServicesSwiper() {
+  const popularServicesSwiper = document.querySelector(
+    ".popular-services-swiper",
+  );
+  if (!popularServicesSwiper) return;
+
+  new Swiper(popularServicesSwiper, {
+    slidesPerView: 1,
+    loop: true,
+    speed: 800,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    navigation: {
+      nextEl: ".popular-services-next",
+      prevEl: ".popular-services-prev",
     },
   });
 }

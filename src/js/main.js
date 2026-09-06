@@ -5,9 +5,12 @@
 import {
   initLenis,
   initDateTime,
+  initOfferCountdowns,
+  initStatsCounters,
   initTourVideoPlayer,
   initTestimonialSwiper,
   initOffersSwiper,
+  initPopularServicesSwiper,
   initCopyButtons,
   initScrollToTop,
   initTextHoverAnimation,
@@ -31,6 +34,35 @@ function handleMobileMenu(navbarToggler, target) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  const siteHeader = document.querySelector("#site-header");
+  const announcementBar = siteHeader?.querySelector(".announcement-bar");
+
+  if (siteHeader && announcementBar) {
+    let announcementHeight = announcementBar.getBoundingClientRect().height;
+    siteHeader.style.setProperty(
+      "--announcement-height",
+      `${announcementHeight}px`,
+    );
+
+    const updateHeader = () => {
+      const isScrolled = window.scrollY >= announcementHeight;
+      siteHeader.classList.toggle("is-scrolled", isScrolled);
+      document.body.classList.toggle("header-condensed", isScrolled);
+    };
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    window.addEventListener("resize", () => {
+      siteHeader.classList.remove("is-scrolled");
+      announcementHeight = announcementBar.offsetHeight;
+      siteHeader.style.setProperty(
+        "--announcement-height",
+        `${announcementHeight}px`,
+      );
+      updateHeader();
+    });
+  }
+
   const themeToggleBtn = document.querySelector("#theme-toggle-btn");
   const savedTheme = localStorage.getItem("theme");
 
@@ -75,6 +107,12 @@ window.addEventListener("DOMContentLoaded", () => {
   // Live date/time
   initDateTime();
 
+  // Offer countdowns
+  initOfferCountdowns();
+
+  // Stats counters
+  initStatsCounters();
+
   // Copy to clipboard
   initCopyButtons();
 
@@ -89,6 +127,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Offers swiper
   initOffersSwiper();
+
+  // Popular services swiper
+  initPopularServicesSwiper();
 
   // Scroll to top
   let scrollToTopBtn = document.querySelector("#scroll-to-top-btn");

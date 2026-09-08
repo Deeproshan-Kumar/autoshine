@@ -11,6 +11,7 @@ import {
   initTestimonialSwiper,
   initOffersSwiper,
   initPopularServicesSwiper,
+  initServiceStatisticsSwiper,
   initCopyButtons,
   initScrollToTop,
   initTextHoverAnimation,
@@ -130,6 +131,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Popular services swiper
   initPopularServicesSwiper();
+
+  // Service statistics swiper
+  initServiceStatisticsSwiper();
 
   // Scroll to top
   let scrollToTopBtn = document.querySelector("#scroll-to-top-btn");

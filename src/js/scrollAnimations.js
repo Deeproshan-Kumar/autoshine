@@ -130,7 +130,7 @@ export function initScrollAnimations() {
   revealGroup(".section-header");
   revealGroup(".popular-services .popular-car-item", { y: 32, duration: 0.8 });
   revealGroup(".service-marquee", { y: 20, duration: 0.7 });
-  revealGroup(".trusted-partners .trusted-partners__track", {
+  revealGroup(".trusted-partners .trusted-partners__viewport", {
     y: 20,
     duration: 0.7,
   });

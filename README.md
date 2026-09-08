@@ -23,19 +23,19 @@ The project is built as a lightweight static website with semantic HTML, custom 
 
 ## Pages
 
-| Page | File | Purpose |
-| --- | --- | --- |
-| Home | `index.html` | Main landing page and complete studio overview |
-| About | `about.html` | Studio story and company information |
-| Services | `services.html` | Services page entry point |
-| Customer Experience | `customer-experience.html` | Customer-focused experience content |
-| Portfolio | `portfolio.html` | Completed detailing and restoration work |
-| Blog | `blog.html` | Detailing and vehicle-care articles |
-| Career | `career.html` | Career and team opportunities |
-| Contact | `contact.html` | Contact and booking information |
-| Our Team | `our-team.html` | Team profiles |
-| Testimonials | `testimonials.html` | Customer feedback |
-| FAQs | `faqs.html` | Frequently asked questions |
+| Page                | File                       | Purpose                                        |
+| ------------------- | -------------------------- | ---------------------------------------------- |
+| Home                | `index.html`               | Main landing page and complete studio overview |
+| About               | `about.html`               | Studio story and company information           |
+| Services            | `services.html`            | Services page entry point                      |
+| Customer Experience | `customer-experience.html` | Customer-focused experience content            |
+| Portfolio           | `portfolio.html`           | Completed detailing and restoration work       |
+| Blog                | `blog.html`                | Detailing and vehicle-care articles            |
+| Career              | `career.html`              | Career and team opportunities                  |
+| Contact             | `contact.html`             | Contact and booking information                |
+| Our Team            | `our-team.html`            | Team profiles                                  |
+| Testimonials        | `testimonials.html`        | Customer feedback                              |
+| FAQs                | `faqs.html`                | Frequently asked questions                     |
 
 ## Technology
 

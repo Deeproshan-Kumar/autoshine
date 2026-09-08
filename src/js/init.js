@@ -179,14 +179,6 @@ export function initTestimonialSwiper() {
     },
 
     breakpoints: {
-      375: {
-        slidesPerView: 1,
-      },
-
-      576: {
-        slidesPerView: 1,
-      },
-
       768: {
         slidesPerView: 2,
         spaceBetween: 24,
@@ -206,7 +198,7 @@ export function initOffersSwiper() {
   if (!offersSwiper) return;
 
   new Swiper(offersSwiper, {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
     speed: 800,
@@ -227,19 +219,6 @@ export function initOffersSwiper() {
     },
 
     breakpoints: {
-      375: {
-        slidesPerView: 1,
-      },
-
-      576: {
-        slidesPerView: 1,
-      },
-
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 24,
-      },
-
       1024: {
         slidesPerView: 2,
         spaceBetween: 24,
@@ -255,18 +234,51 @@ export function initPopularServicesSwiper() {
   );
   if (!popularServicesSwiper) return;
 
-  new Swiper(popularServicesSwiper, {
+  const paginationButtons = [
+    ...popularServicesSwiper.querySelectorAll(
+      ".popular-service-pagination [data-slide-index]",
+    ),
+  ];
+
+  const swiper = new Swiper(popularServicesSwiper, {
     slidesPerView: 1,
     loop: true,
     speed: 800,
+  });
+
+  const updatePagination = (activeIndex) => {
+    paginationButtons.forEach((button, index) => {
+      const isActive = index === activeIndex;
+      button.classList.toggle("swiper-pagination-bullet-active", isActive);
+      button.setAttribute("aria-selected", String(isActive));
+    });
+  };
+
+  paginationButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      swiper.slideToLoop(Number(button.dataset.slideIndex));
+    });
+  });
+
+  swiper.on("slideChange", () => updatePagination(swiper.realIndex));
+  updatePagination(swiper.realIndex);
+}
+
+// Init service statitics swiper
+export function initServiceStatisticsSwiper() {
+  const serviceStatisticsSwiper = document.querySelector(
+    ".service-statistics-swiper",
+  );
+  if (!serviceStatisticsSwiper) return;
+
+  new Swiper(serviceStatisticsSwiper, {
+    direction: "vertical",
+    loop: true,
+    speed: 800,
     autoplay: {
-      delay: 5000,
+      delay: 4000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
-    },
-    navigation: {
-      nextEl: ".popular-services-next",
-      prevEl: ".popular-services-prev",
     },
   });
 }

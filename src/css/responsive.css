@@ -172,52 +172,52 @@
 .section,
 .site-header .announcement-bar,
 .navbar,
-.footer-inner,
-.copyright-bar {
+.footer {
   padding-inline: 1rem;
 }
 
 @media (min-width: 48rem) {
+
   .section,
   .site-header .announcement-bar,
   .navbar,
-  .footer-inner,
-  .copyright-bar {
+  .footer {
     padding-inline: 2rem;
   }
 }
 
 @media (min-width: 64rem) {
+
   .section,
   .site-header .announcement-bar,
   .navbar,
-  .footer-inner,
-  .copyright-bar {
+  .footer {
     padding-inline: 2rem;
   }
 }
 
 @media (min-width: 80rem) {
+
   .section,
   .site-header .announcement-bar,
   .navbar,
-  .footer-inner,
-  .copyright-bar {
+  .foote {
     padding-inline: 2rem;
   }
 }
 
 @media (min-width: 96rem) {
+
   .section,
   .site-header .announcement-bar,
   .navbar,
-  .footer-inner,
-  .copyright-bar {
+  .footer {
     padding-inline: 3rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .service-marquee__track,
   .trusted-partners__track {
     animation-play-state: paused;

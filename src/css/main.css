@@ -1702,6 +1702,15 @@ embed {
   border-radius: 0.5rem;
 }
 
+.whatsapp-chat-option {
+  cursor: pointer;
+  transition: 300ms all ease-in-out;
+}
+
+.whatsapp-chat-option:hover {
+  border: 0.0625rem solid var(--clr-primary);
+}
+
 .business-profile-pic {
   height: 3.6rem;
   width: 3.6rem;

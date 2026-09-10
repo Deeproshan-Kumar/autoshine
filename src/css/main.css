@@ -861,7 +861,6 @@ embed {
 /* Popular Services */
 .popular-car-item {
   position: relative;
-  text-align: center;
 }
 
 .popular-car-item::before {
@@ -888,6 +887,7 @@ embed {
 
 .popular-car-item__brand {
   color: var(--clr-primary);
+  text-align: center;
   letter-spacing: 0.12rem;
 }
 

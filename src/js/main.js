@@ -15,6 +15,7 @@ import {
   initCopyButtons,
   initScrollToTop,
   initTextHoverAnimation,
+  initWhatsappWidget,
 } from "./init.js";
 import { toggleTheme } from "./toggleTheme.js";
 import { initPageTransition } from "./pageTransition.js";
@@ -138,4 +139,16 @@ window.addEventListener("DOMContentLoaded", () => {
   // Scroll to top
   let scrollToTopBtn = document.querySelector("#scroll-to-top-btn");
   initScrollToTop(scrollToTopBtn, lenis);
+
+  // WhatsApp widget
+  let whatsappBtn = document.querySelector("#whatsapp-btn"),
+    whatsappChatClose = document.querySelector("#whatsapp-chat-close"),
+    whatsappChatPopup = document.querySelector("#whatsapp-chat-popup"),
+    launchWhatsappTrigger = document.querySelector("#launch-whatsapp");
+  initWhatsappWidget(
+    whatsappBtn,
+    whatsappChatClose,
+    whatsappChatPopup,
+    launchWhatsappTrigger,
+  );
 });

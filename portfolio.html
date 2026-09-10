@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | AutoShine</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Lennis CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- App CSS -->
+    <link rel="stylesheet" href="src/css/bootstrap-override.css" />
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="src/css/responsive.css" />
+</head>
+
+<body>
+    <!-- Page Transition -->
+    <div id="page-transition" class="pillars-overlay" aria-hidden="true">
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+    </div>
+
+    <!-- Site Header -->
+    <header class="site-header" id="site-header">
+        <div class="announcement-bar bg-primary">
+            <div class="container py-1 py-lg-2">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-6">
+                        <ul
+                            class="list-unstyled d-flex justify-content-between justify-content-lg-start align-items-center gap-2 gap-xl-4 text-sm mb-0">
+                            <li class="action mail">
+                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                                        name="mail"></ion-icon>contact@autoshine.com</a>
+                            </li>
+                            <li class="action readonly">
+                                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri :
+                                09:00am - 08:00pm
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <ul
+                            class="list-unstyled d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-2 gap-xl-4 text-sm mb-0">
+                            <li class="action call">
+                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                                        name="call"></ion-icon>+91
+                                    1234567890</a>
+                            </li>
+                            <li class="action switch-lang">
+                                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
+                                <select name="lang" id="lang" class="lang">
+                                    <option value="en" selected>EN</option>
+                                </select>
+                            </li>
+                            <li class="action login">
+                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                                        name="person"></ion-icon>Login</a>
+                            </li>
+                            <li class="action register">
+                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                                        name="person"></ion-icon>Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container py-lg-2">
+                <a class="navbar-brand fs-4 fw-semibold me-0" href="index.html">
+                    <span class="text-primary">Auto</span>Shine
+                    <p class="text-sm opacity-75 fw-light mb-0">Detailing Studio</p>
+                </a>
+                <div class="d-none d-lg-block">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-1 active" aria-current="page" href="index.html"><ion-icon
+                                    name="home"></ion-icon>Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link rounded-1 dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <ion-icon name="information-circle"></ion-icon>About
+                            </a>
+                            <ul class="dropdown-menu px-2">
+                                <li>
+                                    <a class="rounded-1 dropdown-item" href="about.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="rounded-1 dropdown-item" href="our-team.html">Our Team</a>
+                                </li>
+                                <li>
+                                    <a class="rounded-1 dropdown-item" href="testimonials.html">Testimonials</a>
+                                </li>
+                                <li>
+                                    <a class="rounded-1 dropdown-item" href="faqs.html">FAQs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-1" href="services.html"><ion-icon
+                                    name="settings"></ion-icon>Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-1" href="customer-experience.html"><ion-icon
+                                    name="pricetag"></ion-icon>Customer Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-1" href="portfolio.html"><ion-icon
+                                    name="people"></ion-icon>Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-1" href="career.html"><ion-icon
+                                    name="briefcase"></ion-icon>Career</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-1" href="contact.html"><ion-icon name="call"></ion-icon>Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="dropdown-item" href="about.html">About</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="our-team.html">Our Team</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="faqs.html">FAQs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="customer-experience.html">Customer Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="career.html">Career</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="career.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-actions d-flex justify-content-end align-items-center gap-2">
+                    <button data-size="fit" class="btn btn-primary" id="theme-toggle-btn">
+                        <span>
+                            <ion-icon class="icon" name="sunny"></ion-icon>
+                        </span>
+                    </button>
+                    <a href="contact.html" data-size="md" class="btn btn-primary d-none d-lg-inline-block">
+                        <span>
+                            <ion-icon name="call" class="me-1"></ion-icon><span class="d-none d-lg-inline-block">Book
+                                Now</span>
+                        </span>
+                    </a>
+                    <button class="navbar-toggler btn btn-primary d-lg-none" id="navbar-toggler" type="button"
+                        data-size="fit">
+                        <span>
+                            <ion-icon class="icon" name="menu"></ion-icon>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" id="main">
+
+        <!-- Fullwidth CTA -->
+        <section class="section fullwidth-cta" id="fullwidth-cta">
+            <div class="container py-4 py-lg-0">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
+                        <div class="wrapper">
+                            <h2 class="cta-title">Give Your Car the Finish It Deserves.</h2>
+                            <p class="cta-description">
+                                From deep interior cleaning to a flawless exterior finish, we
+                                bring your vehicle back to its best. Book your detailing
+                                service today and drive away feeling like you just bought it
+                                again.
+                            </p>
+                            <a href="tel:+971505550184" class="cta-btn">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="icon-box d-flex justify-content-center align-items-center">
+                                        <ion-icon class="animate-pulse" name="call-sharp"></ion-icon>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm mb-1">We are available 24x7</p>
+                                        <h4 class="text-primary mb-0">+1 123456789</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-4 text-center text-lg-end">
+                        <img src="public/images/cta-img.png" class="img-fluid cta-img" alt="CTA Image" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Whatsapp Chat Popup -->
+    <div class="whatsapp-chat-popup" id="whatsapp-chat-popup">
+        <div class="whatsapp-chat-header">
+            <h4 class="mb-0">Hello! How can we help you?</h4>
+            <button class="whatsapp-chat-close" id="whatsapp-chat-close">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="whatsapp-chat-body">
+            <div class="whatsapp-chat-info">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="business-profile-pic">A</div>
+                    <div class="business-info">
+                        <h6 class="mb-0">AutoShine - Premium Car Detailing</h6>
+                        <p class="mb-0"><small>Business Account</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-chat-message-box">
+                <p class="mb-0">Click below to chat on WhatsApp or send us an email to <a
+                        href="mailto:hello@autoshine.com"
+                        class="text-decoration-none text-primary">hello@autoshine.com</a></p>
+            </div>
+            <div class="whatsapp-chat-option">
+                <div class="d-flex align-items-center gap-2" id="launch-whatsapp">
+                    <div class="business-profile-pic whatsapp">
+                        <ion-icon name="logo-whatsapp" class="icon"></ion-icon>
+                    </div>
+                    <div class="business-info">
+                        <h6 class="mb-0">Chat with us</h6>
+                        <p class="mb-0"><small>AutoShine - Premium Car Detailing</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="btn btn-primary scroll-to-top-btn" id="scroll-to-top-btn" data-size="fit">
+        <span>
+            <ion-icon name="chevron-up"></ion-icon>
+        </span>
+    </button>
+
+    <!-- WhatsApp Button -->
+    <button class="btn btn-primary whatsapp-btn" id="whatsapp-btn" data-size="fit">
+        <span>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+        </span>
+    </button>
+
+    <!-- Site Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-inner row gy-4">
+                <div class="col-lg-3">
+                    <a class="footer-brand fs-4 fw-semibold d-inline-block text-decoration-none mb-3" href="index.html">
+                        <span class="text-primary">Auto</span>Shine
+                        <p class="text-sm opacity-75 fw-light mb-0">Detailing Studio</p>
+                    </a>
+                    <p class="text-sm">
+                        Premium car care for Dubai drivers who expect a clean finish,
+                        careful workmanship, and a straightforward experience.
+                    </p>
+                    <div class="social-handles-widget d-flex align-items-center gap-3">
+                        <a href="#" title="Email" data-size="fit" class="handle mail btn btn-secondary">
+                            <span><ion-icon name="mail"></ion-icon></span>
+                        </a>
+                        <a href="#" title="WhatsApp" data-size="fit" class="handle whatsapp btn btn-secondary">
+                            <span><ion-icon name="logo-whatsapp"></ion-icon></span>
+                        </a>
+                        <a href="#" title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
+                            <span><ion-icon name="logo-instagram"></ion-icon></span>
+                        </a>
+                        <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
+                            <span><ion-icon name="logo-facebook"></ion-icon></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-uppercase tracking-wider">Explore</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="index.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>About</a>
+                        </li>
+                        <li>
+                            <a href="services.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Services</a>
+                        </li>
+                        <li>
+                            <a href="customer-experience.html"><ion-icon class="icon"
+                                    name="arrow-forward"></ion-icon>Customer
+                                Experience</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html"><ion-icon class="icon"
+                                    name="arrow-forward"></ion-icon>Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="blog.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Blog</a>
+                        </li>
+                        <li>
+                            <a href="career.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Career</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-uppercase tracking-wider">Services</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Car
+                                Detailing</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Paint
+                                Protection Film</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Full
+                                Car Painting</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Panel
+                                Painting</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Scratch & Dent Repair</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Color
+                                Change</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Paint
+                                Protection Coating</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Polishing and Buffing</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Bumper
+                                & Plastic Part Painting</a>
+                        </li>
+                        <li>
+                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Custom
+                                Painting</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-uppercase tracking-wider">Get in Touch</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="icon-box d-flex gap-2">
+                            <div class="icon">
+                                <ion-icon name="mail"></ion-icon>
+                            </div>
+                            <div>
+                                <p class="text-xs text-uppercase tracking-wider mb-0">
+                                    Email Us
+                                </p>
+                                <a href="mailto:hello@autoshine.com"
+                                    class="text-decoration-none text-sm">hello@autoshine.com</a>
+                            </div>
+                        </li>
+                        <li class="icon-box d-flex gap-2">
+                            <div class="icon">
+                                <ion-icon name="call"></ion-icon>
+                            </div>
+                            <div>
+                                <p class="text-xs text-uppercase tracking-wider mb-0">
+                                    Call Us
+                                </p>
+                                <a href="tel:+971505550184" class="text-decoration-none text-sm">+971 50 555 0184</a>
+                            </div>
+                        </li>
+                        <li class="icon-box d-flex gap-2">
+                            <div class="icon">
+                                <ion-icon name="location"></ion-icon>
+                            </div>
+                            <div>
+                                <p class="text-xs text-uppercase tracking-wider mb-0">
+                                    Location
+                                </p>
+                                <a href="#contact-us" class="text-decoration-none text-sm">Dubai, United Arab
+                                    Emirates</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row align-items-center copyright-bar">
+                <div class="col-sm-12 col-lg-6">
+                    <p class="text-sm text-center text-lg-start mb-0">
+                        &copy; 2026
+                        <a href="#" class="text-primary text-decoration-none">AutoShine</a>. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <ul class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-0">
+                        <li class="mb-0">
+                            <a href="#" class="text-decoration-none">Privacy Policy</a>
+                        </li>
+                        <li class="mb-0">
+                            <a href="#" class="text-decoration-none">Terms of Service</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Ionicons JS -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Lennis -->
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- CountUp JS -->
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.9.0/dist/countUp.umd.js"></script>
+    <!-- Main JS -->
+    <script type="module" src="src/js/main.js"></script>
+</body>
+
+</html>

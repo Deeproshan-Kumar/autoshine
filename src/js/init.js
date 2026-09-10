@@ -333,6 +333,34 @@ export function initCopyButtons() {
   });
 }
 
+// Init text hover animation
+export function initTextHoverAnimation() {
+  if (typeof gsap === "undefined") return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const textElements = document.querySelectorAll(".anim-txt span");
+
+  textElements.forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      if (gsap.isTweening(element)) return;
+      gsap.to(element, {
+        transformOrigin: "bottom",
+        scaleY: 0.75,
+        scaleX: 1.25,
+        duration: 0.1,
+        onComplete: () => {
+          gsap.to(element, {
+            scaleY: 1,
+            scaleX: 1,
+            duration: 2.5,
+            ease: "elastic.out(1, 0.25)",
+          });
+        },
+      });
+    });
+  });
+}
+
 // Init scroll to top
 export function initScrollToTop(el, lenis) {
   if (!el) return;
@@ -375,30 +403,57 @@ export function initScrollToTop(el, lenis) {
   });
 }
 
-// Init text hover animation
-export function initTextHoverAnimation() {
-  if (typeof gsap === "undefined") return;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+// Init whatsapp widget
+export function initWhatsappWidget(
+  whatsappBtn,
+  whatsappChatClose,
+  whatsappChatPopup,
+  launchWhatsappTrigger,
+) {
+  if (
+    !whatsappBtn ||
+    !whatsappChatClose ||
+    !whatsappChatPopup ||
+    !launchWhatsappTrigger
+  )
+    return;
 
-  const textElements = document.querySelectorAll(".anim-txt span");
+  whatsappBtn.addEventListener("click", function () {
+    whatsappChatPopup.classList.toggle("d-block");
 
-  textElements.forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-      if (gsap.isTweening(element)) return;
-      gsap.to(element, {
-        transformOrigin: "bottom",
-        scaleY: 0.75,
-        scaleX: 1.25,
-        duration: 0.1,
-        onComplete: () => {
-          gsap.to(element, {
-            scaleY: 1,
-            scaleX: 1,
-            duration: 2.5,
-            ease: "elastic.out(1, 0.25)",
-          });
-        },
-      });
-    });
+    if (
+      typeof gsap === "undefined" ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
+
+    gsap.fromTo(
+      whatsappChatPopup,
+      { autoAlpha: 0, y: 20, scale: 0.96, transformOrigin: "bottom right" },
+      {
+        autoAlpha: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.35,
+        ease: "power2.out",
+        clearProps: "transform",
+      },
+    );
+  });
+
+  whatsappChatClose.addEventListener("click", function () {
+    whatsappChatPopup.classList.remove("d-block");
+  });
+
+  launchWhatsappTrigger.addEventListener("click", function () {
+    whatsappChatPopup.classList.remove("d-block");
+
+    const whatsappWindow = window.open(
+      "https://wa.me/+11234567890",
+      "_blank",
+      "noopener,noreferrer",
+    );
+
+    if (!whatsappWindow) window.location.href = "https://wa.me/+11234567890";
   });
 }

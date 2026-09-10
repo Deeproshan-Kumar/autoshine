@@ -7,7 +7,7 @@
   --clr-primary: #fb2c36;
   --clr-primary-hover: #e11d29;
   --clr-dark-surface: #16161b;
-  --site-header-offset: 7.625rem;
+  --site-header-offset: 7.875rem;
   --site-navbar-height: 4.3125rem;
 }
 
@@ -168,7 +168,7 @@ embed {
   vertical-align: middle;
 }
 
-.section-header > p {
+.section-header>p {
   max-width: 35rem;
   margin-inline: auto;
 }
@@ -259,12 +259,12 @@ embed {
     visibility 0s linear 300ms;
 }
 
-.announcement-bar > li {
+.announcement-bar>li {
   white-space: nowrap;
 }
 
 .announcement-bar a,
-.announcement-bar > * {
+.announcement-bar>* {
   color: #ffffff;
 }
 
@@ -320,11 +320,11 @@ embed {
     background-color 300ms ease-in-out;
 }
 
-.site-header .navbar-nav:hover > .nav-item > .nav-link {
+.site-header .navbar-nav:hover>.nav-item>.nav-link {
   opacity: 0.5;
 }
 
-.site-header .navbar-nav:hover > .nav-item > .nav-link:hover {
+.site-header .navbar-nav:hover>.nav-item>.nav-link:hover {
   opacity: 1;
   color: var(--clr-black);
 }
@@ -471,36 +471,36 @@ embed {
   transition: transform 300ms ease-in-out;
 }
 
-.social-handles-widget .handle > span {
+.social-handles-widget .handle>span {
   backdrop-filter: blur(1rem);
 }
 
-.social-handles-widget .handle > span {
+.social-handles-widget .handle>span {
   background: #fb2c3625;
   color: var(--clr-primary);
 }
 
-.social-handles-widget .handle.whatsapp > span {
+.social-handles-widget .handle.whatsapp>span {
   background-color: #00c95020;
   color: #00c950;
 }
 
-.social-handles-widget .handle.insta > span {
+.social-handles-widget .handle.insta>span {
   background-color: #e1306c20;
   color: #e1306c;
 }
 
-.social-handles-widget .handle.facebook > span {
+.social-handles-widget .handle.facebook>span {
   background-color: #2b7fff20;
   color: #2b7fff;
 }
 
-.scroll-down-indicator > a {
+.scroll-down-indicator>a {
   min-height: 2.75rem;
   width: 2.75rem;
 }
 
-.scroll-down-indicator > a > img {
+.scroll-down-indicator>a>img {
   filter: invert(1);
 }
 
@@ -509,12 +509,10 @@ embed {
   position: absolute;
   height: 1px;
   width: 100%;
-  background: linear-gradient(
-    to left,
-    transparent,
-    var(--clr-primary),
-    transparent
-  );
+  background: linear-gradient(to left,
+      transparent,
+      var(--clr-primary),
+      transparent);
 }
 
 /* Car Animation */
@@ -531,13 +529,11 @@ embed {
   position: relative;
   bottom: 0;
   pointer-events: none;
-  background: repeating-linear-gradient(
-    135deg,
-    var(--clr-primary) 0,
-    var(--clr-primary) 1rem,
-    transparent 1rem,
-    transparent 1.5rem
-  );
+  background: repeating-linear-gradient(135deg,
+      var(--clr-primary) 0,
+      var(--clr-primary) 1rem,
+      transparent 1rem,
+      transparent 1.5rem);
 
   background-size: 2.5rem 100%;
   animation: separatorMove 1.2s linear infinite;
@@ -846,16 +842,14 @@ embed {
   width: 2rem;
   flex: 0 0 auto;
   background-color: #ffd0bd;
-  clip-path: polygon(
-    50% 0,
-    62% 38%,
-    100% 50%,
-    62% 62%,
-    50% 100%,
-    38% 62%,
-    0 50%,
-    38% 38%
-  );
+  clip-path: polygon(50% 0,
+      62% 38%,
+      100% 50%,
+      62% 62%,
+      50% 100%,
+      38% 62%,
+      0 50%,
+      38% 38%);
 }
 
 /* Popular Services */
@@ -956,7 +950,7 @@ embed {
   font-size: 1rem;
 }
 
-.popular-services-nav button > span {
+.popular-services-nav button>span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1110,7 +1104,7 @@ embed {
   transition: transform 300ms ease-in-out;
 }
 
-.card.service .card-header > .icon {
+.card.service .card-header>.icon {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -1124,7 +1118,7 @@ embed {
   z-index: 1;
 }
 
-.card.service .card-header > .discount {
+.card.service .card-header>.discount {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -1172,6 +1166,23 @@ embed {
   background-color: var(--bs-card-bg);
 }
 
+/* Our Latest Transformations */
+.card.transformation .card-header {
+  overflow: hidden;
+}
+
+.card.transformation .card-header>img {
+  transition: transform 400ms ease-in-out;
+}
+
+.card.transformation:hover .card-header>img {
+  transform: scale(1.1);
+}
+
+.cards .card-header {
+  min-height: 13rem;
+}
+
 /* Text Animation */
 .anim-txt {
   font-size: 9vw;
@@ -1184,23 +1195,6 @@ embed {
 .anim-txt span:hover {
   color: var(--clr-border);
   -webkit-text-fill-color: var(--clr-border);
-}
-
-/* Our Latest Transformations */
-.card.transformation .card-header {
-  overflow: hidden;
-}
-
-.card.transformation .card-header > img {
-  transition: transform 400ms ease-in-out;
-}
-
-.card.transformation:hover .card-header > img {
-  transform: scale(1.1);
-}
-
-.cards .card-header {
-  min-height: 13rem;
 }
 
 /* Exclusive Offers */
@@ -1399,7 +1393,7 @@ embed {
   overflow: hidden;
 }
 
-.faq-visual > img {
+.faq-visual>img {
   min-height: 33rem;
   object-fit: cover;
 }
@@ -1435,7 +1429,7 @@ embed {
 }
 
 /* Studio Tour */
-.studio-tour .section-header > p {
+.studio-tour .section-header>p {
   margin-inline: 0;
 }
 
@@ -1469,7 +1463,7 @@ embed {
   border-right: 0.15rem solid var(--clr-primary);
 }
 
-.video-control-btn.btn[data-size="fit"] > span {
+.video-control-btn.btn[data-size="fit"]>span {
   height: 3.5rem;
   width: 3.5rem;
   font-size: 1.5rem;
@@ -1629,7 +1623,7 @@ embed {
   pointer-events: auto;
 }
 
-.scroll-to-top-btn > span {
+.scroll-to-top-btn>span {
   border-radius: 50%;
 }
 
@@ -1641,7 +1635,7 @@ embed {
   z-index: 999;
 }
 
-.whatsapp-btn.btn[data-size="fit"] > span {
+.whatsapp-btn.btn[data-size="fit"]>span {
   height: 3rem;
   width: 3rem;
   background-color: #25d366;
@@ -1653,6 +1647,95 @@ embed {
   display: inline-block;
   transform-origin: center bottom;
   will-change: transform;
+}
+
+.whatsapp-chat-popup {
+  position: fixed;
+  bottom: 10rem;
+  right: 2rem;
+  max-width: 22rem;
+  width: 100%;
+  border-radius: 1rem;
+  display: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.whatsapp-chat-popup .whatsapp-chat-header {
+  position: relative;
+  background-color: var(--clr-primary);
+  padding: 1rem;
+  padding-right: 2.5rem;
+}
+
+.whatsapp-chat-popup .whatsapp-chat-header>h4 {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.whatsapp-chat-popup .whatsapp-chat-header .whatsapp-chat-close {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 2rem;
+}
+
+.whatsapp-chat-popup .whatsapp-chat-body {
+  background: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.whatsapp-chat-info,
+.whatsapp-chat-message-box,
+.whatsapp-chat-option {
+  background: var(--clr-white);
+  border: 0.0625rem solid var(--clr-border);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.business-profile-pic {
+  height: 3.6rem;
+  width: 3.6rem;
+  border-radius: 50%;
+  border: 0.0625rem solid var(--clr-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.business-profile-pic.whatsapp {
+  height: 3.2rem;
+  width: 3.2rem;
+  background: #25d366;
+  color: #ffffff;
+}
+
+.business-info {
+  width: calc(100% - 3.6rem);
+}
+
+/* Subpage Banner */
+.subpage-banner {
+  background-color: #000000;
+}
+
+.subpage-banner-img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  max-width: 25rem;
 }
 
 /* -------------------------------------------------- *
@@ -1671,11 +1754,11 @@ embed {
   color: var(--clr-secondary);
 }
 
-.footer ul > li:not(:last-child) {
+.footer ul>li:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
-.footer ul > li > a {
+.footer ul>li>a {
   position: relative;
   font-size: 0.875rem;
   text-decoration: none;
@@ -1683,18 +1766,18 @@ embed {
   transition: 300ms color ease-in-out;
 }
 
-.footer ul > li > a .icon {
+.footer ul>li>a .icon {
   opacity: 0;
   margin-left: -1.1rem;
   margin-right: 0.25rem;
   transition: all 300ms ease-in-out;
 }
 
-.footer ul > li > a:hover {
+.footer ul>li>a:hover {
   color: var(--clr-secondary);
 }
 
-.footer ul > li > a:hover .icon {
+.footer ul>li>a:hover .icon {
   opacity: 1;
   color: var(--clr-primary-hover);
   margin-left: 0;

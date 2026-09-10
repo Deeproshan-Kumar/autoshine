@@ -1727,7 +1727,18 @@ embed {
 
 /* Subpage Banner */
 .subpage-banner {
-  background-color: #000000;
+  position: relative;
+  background-color: var(--clr-surface);
+}
+
+.subpage-banner::before {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  height: 4rem;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--clr-surface), transparent);
 }
 
 .subpage-banner-img {
@@ -1736,6 +1747,15 @@ embed {
   right: 0;
   transform: translateY(-50%);
   max-width: 25rem;
+  animation: carColorChangeAnim 10s linear infinite;
+}
+
+@keyframes carColorChangeAnim {
+  0% {
+    filter: hue-rotate(0deg);
+  } 100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 /* -------------------------------------------------- *

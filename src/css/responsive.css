@@ -98,6 +98,22 @@
     padding-left: 3rem;
   }
 
+  .subpage-banner-img {
+    display: none;
+  }
+
+  .map-container {
+    padding-bottom: 0;
+  }
+  
+  .map-container iframe {
+    height: 14rem;
+  }
+
+  .our-locations {
+    margin-top: 0;
+  }
+
   .footer .footer-inner {
     padding-block: 2rem;
   }

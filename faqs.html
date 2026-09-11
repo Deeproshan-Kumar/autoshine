@@ -114,9 +114,14 @@
                             <a class="nav-link rounded-1" href="customer-experience.html"><ion-icon
                                     name="pricetag"></ion-icon>Customer Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" href="portfolio.html"><ion-icon
+                        <li class="nav-item dropdown">
+                            <a class="nav-link rounded-1 dropdown-toggle" href="portfolio.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><ion-icon
                                     name="people"></ion-icon>Portfolio</a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#photos">Photos</a></li>
+                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
@@ -160,8 +165,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="customer-experience.html">Customer Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="portfolio.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="dropdown-item" href="portfolio.html#photos">Photos</a></li>
+                                <li><a class="dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.html">Blog</a>
@@ -198,7 +208,7 @@
     </header>
 
     <main class="main" id="main">
-        <section class="subpage-banner" id="subpage-banner">
+        <section class="section subpage-banner" id="subpage-banner">
             <div class="container position-relative py-4 py-lg-5">
                 <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
                     class="subpage-banner-img img-fluid w-100">

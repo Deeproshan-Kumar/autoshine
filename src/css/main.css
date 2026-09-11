@@ -387,6 +387,10 @@ embed {
   padding-inline: 0.4rem;
 }
 
+.site-header .navbar-toggler {
+  color: #ffffff !important;
+}
+
 /* Hero Section */
 .hero .text-accent {
   background-color: var(--clr-secondary);
@@ -1542,6 +1546,58 @@ embed {
   color: #00c950;
 }
 
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #fe8686;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgba(253, 13, 13, 0.25);
+}
+
+.map-container {
+  padding-bottom: 10rem;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  border-radius: 0.25rem;
+}
+
+.our-locations {
+  margin-top: -10rem;
+}
+
+.card.consulation,
+.card.location {
+  overflow: hidden;
+}
+
+.card.location::before {
+  content: "";
+  position: absolute;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  filter: blur(7rem);
+  background: var(--clr-primary);
+  transition: opacity 300ms ease-in-out;
+}
+
+.card.location:hover::before {
+  opacity: 1;
+}
+
+.card.consulation .icon-box .icon,
+.card.location .icon-box .icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.5rem;
+}
+
 /* Fullwidth CTA */
 .fullwidth-cta {
   background-color: var(--clr-dark-surface);
@@ -1738,6 +1794,7 @@ embed {
 .subpage-banner {
   position: relative;
   background-color: var(--clr-surface);
+  border-bottom: 0.0625rem solid var(--clr-border);
 }
 
 .subpage-banner::before {
@@ -1762,7 +1819,9 @@ embed {
 @keyframes carColorChangeAnim {
   0% {
     filter: hue-rotate(0deg);
-  } 100% {
+  }
+
+  100% {
     filter: hue-rotate(360deg);
   }
 }

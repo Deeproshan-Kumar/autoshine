@@ -36,37 +36,37 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-lg-6">
                         <ul
-                            class="list-unstyled d-flex justify-content-between justify-content-lg-start align-items-center gap-2 gap-xl-4 text-sm mb-0">
+                            class="list-unstyled mb-0 d-flex justify-content-between justify-content-lg-start align-items-center gap-2 gap-xl-4 text-sm mb-0">
                             <li class="action mail">
-                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-2"
                                         name="mail"></ion-icon>contact@autoshine.com</a>
                             </li>
                             <li class="action readonly">
-                                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri :
+                                <ion-icon class="icon me-2" name="time"></ion-icon>Mon - Fri :
                                 09:00am - 08:00pm
                             </li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <ul
-                            class="list-unstyled d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-2 gap-xl-4 text-sm mb-0">
+                            class="list-unstyled mb-0 d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-2 gap-xl-4 text-sm mb-0">
                             <li class="action call">
-                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-2"
                                         name="call"></ion-icon>+91
                                     1234567890</a>
                             </li>
                             <li class="action switch-lang">
-                                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
+                                <label for="lang"><ion-icon class="icon me-2" name="language"></ion-icon>Lang:</label>
                                 <select name="lang" id="lang" class="lang">
                                     <option value="en" selected>EN</option>
                                 </select>
                             </li>
                             <li class="action login">
-                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-2"
                                         name="person"></ion-icon>Login</a>
                             </li>
                             <li class="action register">
-                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-2"
                                         name="person"></ion-icon>Register</a>
                             </li>
                         </ul>
@@ -114,9 +114,14 @@
                             <a class="nav-link rounded-1" href="customer-experience.html"><ion-icon
                                     name="pricetag"></ion-icon>Customer Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" href="portfolio.html"><ion-icon
+                        <li class="nav-item dropdown">
+                            <a class="nav-link rounded-1 dropdown-toggle" href="portfolio.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><ion-icon
                                     name="people"></ion-icon>Portfolio</a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#photos">Photos</a></li>
+                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
@@ -160,8 +165,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="customer-experience.html">Customer Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="portfolio.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="dropdown-item" href="portfolio.html#photos">Photos</a></li>
+                                <li><a class="dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.html">Blog</a>
@@ -182,7 +192,7 @@
                     </button>
                     <a href="contact.html" data-size="md" class="btn btn-primary d-none d-lg-inline-block">
                         <span>
-                            <ion-icon name="call" class="me-1"></ion-icon><span class="d-none d-lg-inline-block">Book
+                            <ion-icon name="call" class="me-2"></ion-icon><span class="d-none d-lg-inline-block">Book
                                 Now</span>
                         </span>
                     </a>
@@ -199,14 +209,14 @@
 
     <main class="main" id="main">
         <!-- Subpage Banner -->
-        <section class="subpage-banner" id="subpage-banner">
+        <section class="section subpage-banner" id="subpage-banner">
             <div class="container position-relative py-4 py-lg-5">
                 <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
                     class="subpage-banner-img img-fluid w-100">
                 <h1>Contact Us</h1>
                 <p>Have questions or ready to book? Get in touch with the AutoShine team today.</p>
                 <div class="breadcrumb">
-                    <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
+                    <ul class="list-unstyled mb-0 d-flex align-items-center gap-2 ps-0 mb-0">
                         <li>
                             <a href="index.html"
                                 class="text-decoration-none text-primary d-flex align-items-center gap-2">
@@ -222,34 +232,219 @@
             </div>
         </section>
 
-        <!-- Fullwidth CTA -->
-        <section class="section fullwidth-cta" id="fullwidth-cta">
-            <div class="container py-4 py-lg-0">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
-                        <div class="wrapper">
-                            <h2 class="cta-title">Give Your Car the Finish It Deserves.</h2>
-                            <p class="cta-description">
-                                From deep interior cleaning to a flawless exterior finish, we
-                                bring your vehicle back to its best. Book your detailing
-                                service today and drive away feeling like you just bought it
-                                again.
+        <!-- Contact Form -->
+        <section class="section contact-form" id="contact-form">
+            <div class="container py-4 py-lg-5">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="section-header text-center mb-4 mb-lg-4">
+                            <h2 class="d-inline-block position-relative pb-2">Start Your Vehicle Transformation</h2>
+                            <p class="mb-0">
+                                Tell us what your vehicle needs and we will recommend the right
+                                service, timing, and finish for the way you drive.
                             </p>
-                            <a href="tel:+971505550184" class="cta-btn">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="icon-box d-flex justify-content-center align-items-center">
-                                        <ion-icon class="animate-pulse" name="call-sharp"></ion-icon>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm mb-1">We are available 24x7</p>
-                                        <h4 class="text-primary mb-0">+1 123456789</h4>
-                                    </div>
+                        </div>
+                        <form action="" method="">
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-6 py-2">
+                                    <label for="first-name" class="d-block mb-1">First Name</label>
+                                    <input type="text" name="first-name" id="first-name" class="form-control">
                                 </div>
-                            </a>
+                                <div class="col-sm-12 col-lg-6 py-2">
+                                    <label for="last-name" class="d-block mb-1">Last Name</label>
+                                    <input type="text" name="last-name" id="last-name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-6 py-2">
+                                    <label for="email" class="d-block mb-1">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control">
+                                </div>
+                                <div class="col-sm-12 col-lg-6 py-2">
+                                    <label for="mobile" class="d-block mb-1">Subject</label>
+                                    <select name="subject" id="subject" class="form-control">
+                                        <option value="general-enquiry">General Enquiry</option>
+                                        <option value="booking-assistance">Booking Assistance</option>
+                                        <option value="billing-question">Billing Question</option>
+                                        <option value="technical-support">Technical Support</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="complaint">Complaint</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 py-2">
+                                    <label for="message" class="d-block mb-1">Message</label>
+                                    <textarea name="message" id="message" rows="3" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 py-2">
+                                    <button class="btn btn-primary" data-size="lg" type="submit" id="contact-btn">
+                                        <span>Request Consultation<ion-icon name="send"
+                                                class="icon ms-1"></ion-icon></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="d-flex flex-column gap-4">
+                            <article class="card consulation">
+                                <div class="card-header d-flex align-items-center gap-2 bg-transparent border-0 py-3">
+                                    <div class="icon-box">
+                                        <ion-icon name="call" class="icon"></ion-icon>
+                                    </div>
+                                    <h5 class="mb-0">Phone Consultation</h5>
+                                </div>
+                                <div class="card-body pt-0">
+                                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                                        <li>
+                                            <ion-icon name="call" class="me-2"></ion-icon>+11234567890
+                                        </li>
+                                        <li>
+                                            <ion-icon name="time" class="me-2"></ion-icon>Available 7 Days a Week
+                                        </li>
+                                        <li>
+                                            <ion-icon name="globe" class="me-2"></ion-icon>Personalized Consultation
+                                            Support
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="card consulation">
+                                <div class="card-header d-flex align-items-center gap-2 bg-transparent border-0 py-3">
+                                    <div class="icon-box">
+                                        <ion-icon name="mail" class="icon"></ion-icon>
+                                    </div>
+                                    <h5 class="mb-0">Email Support</h5>
+                                </div>
+                                <div class="card-body pt-0">
+                                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                                        <li>
+                                            <ion-icon name="call" class="me-2"></ion-icon>+11234567890
+                                        </li>
+                                        <li>
+                                            <ion-icon name="time" class="me-2"></ion-icon>Response within 12–24 hours
+                                        </li>
+                                        <li>
+                                            <ion-icon name="globe" class="me-2"></ion-icon>Dedicated Customer Support
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-4 text-center text-lg-end">
-                        <img src="public/images/cta-img.png" class="img-fluid cta-img" alt="CTA Image" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Location -->
+        <section class="section studio-location" id="studio-location">
+            <div class="container py-4 py-lg-5">
+                <div class="section-header text-center">
+                    <h2 class="d-inline-block position-relative pb-2">Our Studio Location</h2>
+                    <p class="mb-0">Visit our premium detailing studio and experience craftsmanship designed to
+                        perfection.</p>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193597.89492332606!2d-74.2913176542922!3d40.69672204394405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1768286032576!5m2!1sen!2sbd"
+                        height="700" class="w-100 border-0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="our-locations row gy-4 gy-lg-0 px-0 px-lg-4">
+                        <div class="col-sm-12 col-lg-4">
+                            <article class="card location">
+                                <div class="card-header d-flex align-items-center gap-2 bg-transparent border-0 py-3">
+                                    <div class="icon-box">
+                                        <ion-icon name="airplane" class="icon"></ion-icon>
+                                    </div>
+                                    <h5 class="mb-0">Riyadh Detailing Studio</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                                        <li><ion-icon name="time" class="me-2"></ion-icon>Open 24/7</li>
+                                        <li><ion-icon name="car-sport" class="me-2"></ion-icon>Shuttle every 10 min</li>
+                                        <li><ion-icon name="location" class="me-2"></ion-icon>Riyadh, Saudi Arabia</li>
+                                        <li><ion-icon name="phone" class="me-2"></ion-icon>+966 XX XXX XXXX</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 py-3">
+                                    <a class="btn btn-primary"
+                                        href="https://www.google.com/maps/search/?api=1&query=Riyadh%20Detailing%20Studio%2C%20Riyadh%2C%20Saudi%20Arabia"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <span>
+                                            Get Directions
+                                            <ion-icon name="arrow-up-right-box" class="icon ms-1"
+                                                aria-hidden="true"></ion-icon>
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-sm-12 col-lg-4">
+                            <article class="card location">
+                                <div class="card-header d-flex align-items-center gap-2 bg-transparent border-0 py-3">
+                                    <div class="icon-box">
+                                        <ion-icon name="airplane" class="icon"></ion-icon>
+                                    </div>
+                                    <h5 class="mb-0">New York (JFK)</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                                        <li><ion-icon name="time" class="me-2"></ion-icon>Open 24/7</li>
+                                        <li><ion-icon name="car-sport" class="me-2"></ion-icon>Shuttle every 15 min</li>
+                                        <li><ion-icon name="location" class="me-2"></ion-icon>555 S Figueroa St, Los
+                                            Angeles, CA
+                                            90071</li>
+                                        <li><ion-icon name="phone" class="me-2"></ion-icon>(213) 555-5678</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 py-3">
+                                    <a class="btn btn-primary"
+                                        href="https://www.google.com/maps/search/?api=1&query=John%20F.%20Kennedy%20International%20Airport%2C%20New%20York%2C%20NY"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <span>
+                                            Get Directions
+                                            <ion-icon name="arrow-up-right-box" class="icon ms-1"
+                                                aria-hidden="true"></ion-icon>
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-sm-12 col-lg-4">
+                            <article class="card location">
+                                <div class="card-header d-flex align-items-center gap-2 bg-transparent border-0 py-3">
+                                    <div class="icon-box">
+                                        <ion-icon name="airplane" class="icon"></ion-icon>
+                                    </div>
+                                    <h5 class="mb-0">Beverly Center</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                                        <li><ion-icon name="time" class="me-2"></ion-icon>Open 24/7</li>
+                                        <li><ion-icon name="car-sport" class="me-2"></ion-icon>Shuttle every 20 min</li>
+                                        <li><ion-icon name="location" class="me-2"></ion-icon>8500 Beverly Blvd, Los
+                                            Angeles, CA
+                                            90048</li>
+                                        <li><ion-icon name="phone"></ion-icon>(323) 555-9012</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 py-3">
+                                    <a class="btn btn-primary"
+                                        href="https://www.google.com/maps/search/?api=1&query=8500%20Beverly%20Blvd%2C%20Los%20Angeles%2C%20CA%2090048"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <span>
+                                            Get Directions
+                                            <ion-icon name="arrow-up-right-box" class="icon ms-1"
+                                                aria-hidden="true"></ion-icon>
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -337,7 +532,7 @@
                 </div>
                 <div class="col-lg-3">
                     <h6 class="text-uppercase tracking-wider">Explore</h6>
-                    <ul class="list-unstyled mb-0">
+                    <ul class="list-unstyled mb-0 mb-0">
                         <li>
                             <a href="index.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Home</a>
                         </li>
@@ -369,7 +564,7 @@
                 </div>
                 <div class="col-lg-3">
                     <h6 class="text-uppercase tracking-wider">Services</h6>
-                    <ul class="list-unstyled mb-0">
+                    <ul class="list-unstyled mb-0 mb-0">
                         <li>
                             <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Car
                                 Detailing</a>
@@ -412,7 +607,7 @@
                 </div>
                 <div class="col-lg-3">
                     <h6 class="text-uppercase tracking-wider">Get in Touch</h6>
-                    <ul class="list-unstyled mb-0">
+                    <ul class="list-unstyled mb-0 mb-0">
                         <li class="icon-box d-flex gap-2">
                             <div class="icon">
                                 <ion-icon name="mail"></ion-icon>
@@ -459,7 +654,8 @@
                     </p>
                 </div>
                 <div class="col-sm-12 col-lg-6">
-                    <ul class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-0">
+                    <ul
+                        class="list-unstyled mb-0 d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-0">
                         <li class="mb-0">
                             <a href="#" class="text-decoration-none">Privacy Policy</a>
                         </li>

@@ -114,9 +114,14 @@
                             <a class="nav-link rounded-1" href="customer-experience.html"><ion-icon
                                     name="pricetag"></ion-icon>Customer Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" href="portfolio.html"><ion-icon
+                        <li class="nav-item dropdown">
+                            <a class="nav-link rounded-1 dropdown-toggle" href="portfolio.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><ion-icon
                                     name="people"></ion-icon>Portfolio</a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#photos">Photos</a></li>
+                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
@@ -160,8 +165,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="customer-experience.html">Customer Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="portfolio.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="dropdown-item" href="portfolio.html#photos">Photos</a></li>
+                                <li><a class="dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.html">Blog</a>
@@ -199,7 +209,7 @@
 
     <main class="main" id="main">
         <!-- Subpage Banner -->
-        <section class="subpage-banner" id="subpage-banner">
+        <section class="section subpage-banner" id="subpage-banner">
             <div class="container position-relative py-4 py-lg-5">
                 <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
                     class="subpage-banner-img img-fluid w-100">
@@ -218,6 +228,300 @@
                             Blog
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section blogs" id="blogs">
+            <div class="container py-4 py-lg-5">
+                <div class="row gy-4">
+                    <div class="col-sm-12 col-lg-6">
+                        <article class="card blog position-relative h-100">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="thumbnail">
+                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
+                                            alt="Red Car" />
+                                    </div>
+                                </div>
+                                <div class="col-8 py-3">
+                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                                        <div class="profile-pic">
+                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                                                alt="Author Profile Pic" />
+                                        </div>
+                                        <p class="mb-0">
+                                            Written by <span class="text-black">Admin</span>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="blog-title d-inline-block mb-2">
+                                        <h5 class="mb-0">Why Your Cars Need Regular Detailing</h5>
+                                    </a>
+                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
+                                        <li>
+                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 25, 2026
+                                        </li>
+                                        <li>
+                                            <ion-icon class="icon me-1" name="time"></ion-icon>8 min
+                                            read
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <article class="card blog position-relative h-100">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="thumbnail">
+                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
+                                            alt="Red Car" />
+                                    </div>
+                                </div>
+                                <div class="col-8 py-3">
+                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                                        <div class="profile-pic">
+                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                                                alt="Author Profile Pic" />
+                                        </div>
+                                        <p class="mb-0">
+                                            Written by <span class="text-black">Admin</span>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="blog-title d-inline-block mb-2">
+                                        <h5 class="mb-0">PPF or Ceramic Coating?</h5>
+                                    </a>
+                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
+                                        <li>
+                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 26, 2026
+                                        </li>
+                                        <li>
+                                            <ion-icon class="icon me-1" name="time"></ion-icon> 15
+                                            min read
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <article class="card blog position-relative h-100">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="thumbnail">
+                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
+                                            alt="Red Car" />
+                                    </div>
+                                </div>
+                                <div class="col-8 py-3">
+                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                                        <div class="profile-pic">
+                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                                                alt="Author Profile Pic" />
+                                        </div>
+                                        <p class="mb-0">
+                                            Written by <span class="text-black">Admin</span>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="blog-title d-inline-block mb-2">
+                                        <h5 class="mb-0">The Five-Minute Interior Reset</h5>
+                                    </a>
+                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
+                                        <li>
+                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 27, 2026
+                                        </li>
+                                        <li>
+                                            <ion-icon class="icon me-1" name="time"></ion-icon>10
+                                            min read
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <article class="card blog position-relative h-100">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="thumbnail">
+                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
+                                            alt="Red Car" />
+                                    </div>
+                                </div>
+                                <div class="col-8 py-3">
+                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                                        <div class="profile-pic">
+                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                                                alt="Author Profile Pic" />
+                                        </div>
+                                        <p class="mb-0">
+                                            Written by <span class="text-black">Admin</span>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="blog-title d-inline-block mb-2">
+                                        <h5 class="mb-0">How to Protect Your Paint Between Details</h5>
+                                    </a>
+                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
+                                        <li>
+                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 28, 2026
+                                        </li>
+                                        <li>
+                                            <ion-icon class="icon me-1" name="time"></ion-icon>7 min read
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <article class="card blog position-relative h-100">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="thumbnail">
+                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
+                                            alt="Red Car" />
+                                    </div>
+                                </div>
+                                <div class="col-8 py-3">
+                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                                        <div class="profile-pic">
+                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                                                alt="Author Profile Pic" />
+                                        </div>
+                                        <p class="mb-0">
+                                            Written by <span class="text-black">Admin</span>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="blog-title d-inline-block mb-2">
+                                        <h5 class="mb-0">A Simple Guide to Cleaner Wheels</h5>
+                                    </a>
+                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
+                                        <li>
+                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 29, 2026
+                                        </li>
+                                        <li>
+                                            <ion-icon class="icon me-1" name="time"></ion-icon>6 min read
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <article class="card blog position-relative h-100">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="thumbnail">
+                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
+                                            alt="Red Car" />
+                                    </div>
+                                </div>
+                                <div class="col-8 py-3">
+                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                                        <div class="profile-pic">
+                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                                                alt="Author Profile Pic" />
+                                        </div>
+                                        <p class="mb-0">
+                                            Written by <span class="text-black">Admin</span>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="blog-title d-inline-block mb-2">
+                                        <h5 class="mb-0">Interior Care Tips for Busy Drivers</h5>
+                                    </a>
+                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
+                                        <li>
+                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 30, 2026
+                                        </li>
+                                        <li>
+                                            <ion-icon class="icon me-1" name="time"></ion-icon>9 min read
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <article class="card blog position-relative h-100">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="thumbnail">
+                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
+                                            alt="Red Car" />
+                                    </div>
+                                </div>
+                                <div class="col-8 py-3">
+                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                                        <div class="profile-pic">
+                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                                                alt="Author Profile Pic" />
+                                        </div>
+                                        <p class="mb-0">
+                                            Written by <span class="text-black">Admin</span>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="blog-title d-inline-block mb-2">
+                                        <h5 class="mb-0">When Should You Book a Full Detail?</h5>
+                                    </a>
+                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
+                                        <li>
+                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 31, 2026
+                                        </li>
+                                        <li>
+                                            <ion-icon class="icon me-1" name="time"></ion-icon>8 min read
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <article class="card blog position-relative h-100">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <div class="thumbnail">
+                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
+                                            alt="Red Car" />
+                                    </div>
+                                </div>
+                                <div class="col-8 py-3">
+                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                                        <div class="profile-pic">
+                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                                                alt="Author Profile Pic" />
+                                        </div>
+                                        <p class="mb-0">
+                                            Written by <span class="text-black">Admin</span>
+                                        </p>
+                                    </div>
+                                    <a href="#" class="blog-title d-inline-block mb-2">
+                                        <h5 class="mb-0">Rainy Season Car Care Essentials</h5>
+                                    </a>
+                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
+                                        <li>
+                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>February 1, 2026
+                                        </li>
+                                        <li>
+                                            <ion-icon class="icon me-1" name="time"></ion-icon>6 min read
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="pagination justify-content-center gap-2 mt-4">
+                        <button class="btn btn-primary">
+                            <span>Prev</span>
+                        </button>
+                        <button class="btn btn-secondary"><span>1</span></button>
+                        <button class="btn btn-secondary"><span>2</span></button>
+                        <button class="btn btn-secondary"><span>3</span></button>
+                        <button class="btn btn-secondary"><span>4</span></button>
+                        <button class="btn btn-primary">
+                            <span>Next</span>
+                        </button>
                 </div>
             </div>
         </section>

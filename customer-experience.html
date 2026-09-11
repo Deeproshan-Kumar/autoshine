@@ -114,9 +114,14 @@
                             <a class="nav-link rounded-1" href="customer-experience.html"><ion-icon
                                     name="pricetag"></ion-icon>Customer Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" href="portfolio.html"><ion-icon
+                        <li class="nav-item dropdown">
+                            <a class="nav-link rounded-1 dropdown-toggle" href="portfolio.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><ion-icon
                                     name="people"></ion-icon>Portfolio</a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#photos">Photos</a></li>
+                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
@@ -160,8 +165,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="customer-experience.html">Customer Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="portfolio.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu px-2">
+                                <li><a class="dropdown-item" href="portfolio.html#photos">Photos</a></li>
+                                <li><a class="dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.html">Blog</a>
@@ -199,7 +209,7 @@
 
     <main class="main" id="main">
         <!-- Subpage Banner -->
-        <section class="subpage-banner" id="subpage-banner">
+        <section class="section subpage-banner" id="subpage-banner">
             <div class="container position-relative py-4 py-lg-5">
                 <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
                     class="subpage-banner-img img-fluid w-100">
@@ -218,6 +228,246 @@
                             Customer Experiences
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section customer-experiences" id="customer-experiences">
+            <div class="container py-4 py-lg-5">
+                <div class="section-header text-center mb-4 mb-lg-4">
+                    <h2 class="d-inline-block position-relative pb-2">
+                        Customer Experiences
+                    </h2>
+                    <p class="mb-0">
+                        Don’t just take our word for it - hear from those who have
+                        experienced the difference, where every detail, every finish and
+                        every interaction reflects a standard beyond expectations.
+                    </p>
+                </div>
+
+                <div class="row gy-4 gy-lg-0">
+                    <div class="col-sm-12 col-lg-6">
+                        <img src="public/images/customer-experience.jpg" class="img-fluid rounded-1"
+                            alt="Customer Experiences" />
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <h4>Customer Experiences & Reflections</h4>
+                        <p>
+                            Our customers come to us for more than a clean car. They want a
+                            team that notices the small things, explains what matters, and
+                            treats their vehicle with the same care they would.
+                        </p>
+                        <p>
+                            From the first inspection to the final walk-around, we keep the
+                            process simple and transparent. You leave with a finish that
+                            feels fresh and a clear plan for keeping it that way.
+                        </p>
+                        <div class="row mt-2 mt-lg-4">
+                            <div class="col-sm-12 col-lg-4">
+                                <div class="total-reviews">
+                                    <img src="public/images/tripadvisor.svg" height="75" width="75"
+                                        class="img-fluid rounded-circle" alt="Google Review Logo" />
+                                    <h5 class="mt-2">Trip Advisor Reviews</h5>
+                                    <div>
+                                        <h6 class="text-primary fw-bold mb-1">
+                                            (4.5)
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star-half"></ion-icon>
+                                        </h6>
+                                        <p class="mb-0">1.25K+ Reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-4">
+                                <div class="total-reviews">
+                                    <img src="public/images/google.svg" height="75" width="75"
+                                        class="img-fluid rounded-circle" alt="Google Review Logo" />
+                                    <h5 class="mt-2">Google Reviews</h5>
+                                    <div>
+                                        <h6 class="text-primary fw-bold mb-1">
+                                            (4.0)
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star-outline"></ion-icon>
+                                        </h6>
+                                        <p class="mb-0">5K+ Reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-4">
+                                <div class="total-reviews">
+                                    <img src="public/images/yelp.svg" height="75" width="75"
+                                        class="img-fluid rounded-circle" alt="Google Review Logo" />
+                                    <h5 class="mt-2">Yelp Reviews</h5>
+                                    <div>
+                                        <h6 class="text-primary fw-bold mb-1">
+                                            (4.0)
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                        </h6>
+                                        <p class="mb-0">2K+ Reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper testimonial-swiper mt-4 mt-lg-5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="card testimonial position-relative h-100">
+                                <div class="card-body d-flex flex-column gap-3 p-lg-4">
+                                    <div class="ratings d-flex align-items-center gap-1">
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                                    </div>
+                                    <p class="mb-0">
+                                        “From start to finish, everything felt seamless. The
+                                        results, the process and the overall experience reflected
+                                        a level of care and professionalism that’s hard to find.”
+                                    </p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                                            class="user-profile-pic rounded-circle img-fluid" />
+                                        <div>
+                                            <p class="text-sm text-body fw-semibold mb-1">
+                                                John Doe
+                                            </p>
+                                            <p class="text-sm fw-normal mb-0">CEO at XYZ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card testimonial position-relative h-100">
+                                <div class="card-body d-flex flex-column gap-3 p-lg-4">
+                                    <div class="ratings d-flex align-items-center gap-1">
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                    </div>
+                                    <p class="mb-0">
+                                        “From start to finish, everything felt seamless. The
+                                        results, the process and the overall experience reflected
+                                        a level of care and professionalism that’s hard to find.”
+                                    </p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                                            class="user-profile-pic rounded-circle img-fluid" />
+                                        <div>
+                                            <p class="text-sm text-body fw-semibold mb-1">
+                                                John Doe
+                                            </p>
+                                            <p class="text-sm fw-normal mb-0">CEO at XYZ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card testimonial position-relative h-100">
+                                <div class="card-body d-flex flex-column gap-3 p-lg-4">
+                                    <div class="ratings d-flex align-items-center gap-1">
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                                    </div>
+                                    <p class="mb-0">
+                                        “From start to finish, everything felt seamless. The
+                                        results, the process and the overall experience reflected
+                                        a level of care and professionalism that’s hard to find.”
+                                    </p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                                            class="user-profile-pic rounded-circle img-fluid" />
+                                        <div>
+                                            <p class="text-sm text-body fw-semibold mb-1">
+                                                John Doe
+                                            </p>
+                                            <p class="text-sm fw-normal mb-0">CEO at XYZ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card testimonial position-relative h-100">
+                                <div class="card-body d-flex flex-column gap-3 p-lg-4">
+                                    <div class="ratings d-flex align-items-center gap-1">
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                                    </div>
+                                    <p class="mb-0">
+                                        “From start to finish, everything felt seamless. The
+                                        results, the process and the overall experience reflected
+                                        a level of care and professionalism that’s hard to find.”
+                                    </p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                                            class="user-profile-pic rounded-circle img-fluid" />
+                                        <div>
+                                            <p class="text-sm text-body fw-semibold mb-1">
+                                                John Doe
+                                            </p>
+                                            <p class="text-sm fw-normal mb-0">CEO at XYZ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card testimonial position-relative h-100">
+                                <div class="card-body d-flex flex-column gap-3 p-lg-4">
+                                    <div class="ratings d-flex align-items-center gap-1">
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star"></ion-icon>
+                                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                                    </div>
+                                    <p class="mb-0">
+                                        “From start to finish, everything felt seamless. The
+                                        results, the process and the overall experience reflected
+                                        a level of care and professionalism that’s hard to find.”
+                                    </p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                                            class="user-profile-pic rounded-circle img-fluid" />
+                                        <div>
+                                            <p class="text-sm text-body fw-semibold mb-1">
+                                                John Doe
+                                            </p>
+                                            <p class="text-sm fw-normal mb-0">CEO at XYZ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination w-auto"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                 </div>
             </div>
         </section>

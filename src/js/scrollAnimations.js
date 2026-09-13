@@ -7,6 +7,10 @@
  *  - waveReveal(): the signature "card wave" — cards in a row rise into place
  *    one after another. Each card only ever travels along the Y axis, but the
  *    sine-eased stagger across the row makes the cascade read as a wave.
+ *
+ * Selector discipline: always target by meaningful class names or IDs,
+ * never by bare tag names. Where no suitable class existed, gsap- prefixed
+ * classes have been added to the HTML so GSAP has an unambiguous handle.
  */
 
 const REDUCED_MOTION = window.matchMedia(
@@ -36,7 +40,8 @@ function revealGroup(selector, vars = {}) {
 }
 
 // Vertical "wave" reveal for card grids/rows.
-function waveReveal(containerSelector, itemSelector, vars = {}) {
+// playOnce: set to true for Swiper wrappers (avoid re-animating cloned slides)
+function waveReveal(containerSelector, itemSelector, vars = {}, playOnce = false) {
   const containers = gsap.utils.toArray(containerSelector);
 
   containers.forEach((container) => {
@@ -57,7 +62,10 @@ function waveReveal(containerSelector, itemSelector, vars = {}) {
       scrollTrigger: {
         trigger: container,
         start: "top 88%",
-        toggleActions: "play none none reverse",
+        // Swiper loop clones slides — don't reverse-animate them on scroll-up
+        toggleActions: playOnce
+          ? "play none none none"
+          : "play none none reverse",
       },
       ...vars,
     });
@@ -114,6 +122,26 @@ function pinBlogIntro() {
   });
 }
 
+// Keep the recent-blogs sidebar visible while the detail article is read.
+function pinRecentBlogs() {
+  const sidebar = document.querySelector(".recent-blogs");
+  const article = document.querySelector(".blog-content");
+
+  if (!sidebar || !article || window.matchMedia("(max-width: 991px)").matches)
+    return;
+
+  ScrollTrigger.create({
+    trigger: sidebar,
+    start: "top top+=128",
+    endTrigger: article,
+    end: "bottom bottom",
+    pin: sidebar,
+    pinSpacing: false,
+    anticipatePin: 1,
+    invalidateOnRefresh: true,
+  });
+}
+
 // Scroll animations
 export function initScrollAnimations() {
   if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
@@ -126,8 +154,13 @@ export function initScrollAnimations() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Section headings across the page
+  // ---- Section headings & subpage banner ----
   revealGroup(".section-header");
+  revealGroup(".subpage-banner h1", { y: 32, duration: 0.8 });
+  revealGroup(".subpage-banner > .container > p", { y: 24, duration: 0.7 });
+  revealGroup(".subpage-banner .breadcrumb", { y: 20, duration: 0.6 });
+
+  // ---- Homepage: popular services ----
   revealGroup(".popular-services .popular-car-item", { y: 32, duration: 0.8 });
   revealGroup(".service-marquee", { y: 20, duration: 0.7 });
   revealGroup(".trusted-partners .trusted-partners__viewport", {
@@ -136,66 +169,113 @@ export function initScrollAnimations() {
   });
   revealGroup(".service-statistics .col-lg-4", { y: 24, duration: 0.7 });
 
-  // About section
-  revealGroup(".about img", { scale: 0.94, y: 16 });
-  revealGroup(".about .col-lg-6:last-child > p", { y: 24, duration: 0.7 });
-  revealGroup(".about .contact-handle", {
+  // ---- About section (homepage) ----
+  // Target the about section image and text blocks by their specific class handles
+  revealGroup(".gsap-about-img", { scale: 0.94, y: 16 });
+  revealGroup(".gsap-about-text", { y: 24, duration: 0.7 });
+  revealGroup(".gsap-about-contact-handles .contact-handle", {
     y: 24,
     duration: 0.6,
     delay: 0.12,
   });
 
-  // Our Journey — timeline entries reveal one by one as you scroll past them
+  // ---- About page sections ----
+  revealGroup(".gsap-about-intro-img", { scale: 0.93, y: 16 });
+  revealGroup(".gsap-about-intro-content", { y: 32, duration: 0.85 });
+  waveReveal(".gsap-about-values-grid", ".gsap-value-card", { y: 40, skewY: 0 });
+  revealGroup(".gsap-about-stats-item", { y: 24, duration: 0.7 });
+
+  // ---- Our Journey — timeline entries reveal one by one as you scroll ----
   revealGroup(".our-journey .journey", { y: 32 });
 
-  // Why Choose Us
-  waveReveal(
-    ".why-choose-us .panel.left > div, .why-choose-us .panel.right > div",
-    ":scope > .card",
-  );
+  // ---- Why Choose Us ----
+  // Split comma-selector into two explicit calls to avoid selector-string issues
+  waveReveal(".why-choose-us .panel.left > div", ":scope > .card");
+  waveReveal(".why-choose-us .panel.right > div", ":scope > .card");
   revealGroup(".why-choose-us .panel.middle img", { scale: 0.9, y: 0 });
 
   // ---- Card sections: vertical wave reveal ----
+  waveReveal(".team .col-lg-10 > .row", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
+  waveReveal(".selection-process .row", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
+  waveReveal(".careers .job-layout", ":scope > .job", {
+    y: 48,
+    skewY: 0,
+  });
   waveReveal(".our-services ul.row", ":scope > li");
   waveReveal(".our-latest-works .cards.row", ":scope > div");
-  waveReveal(".offers-swiper .swiper-wrapper", ":scope > .swiper-slide");
+
+  // Swiper wrappers: play once so GSAP never fights Swiper's cloned slides
+  waveReveal(".offers-swiper .swiper-wrapper", ":scope > .swiper-slide", {}, true);
+  waveReveal(".testimonial-swiper .swiper-wrapper", ":scope > .swiper-slide", {}, true);
+
   waveReveal(".our-amenities .amenities", ":scope > div");
-  revealGroup(".customer-experiences .row.gy-4 > div:first-child img", {
-    scale: 0.94,
-    y: 0,
-  });
-  revealGroup(".customer-experiences .row.gy-4 > div:last-child", {
-    x: 32,
-    y: 0,
-  });
-  waveReveal(".customer-experiences .row.mt-2", ":scope > div", {
+
+  // Customer experiences page — use the gsap-cx-reviews-row class
+  waveReveal(".gsap-cx-reviews-row", ":scope > div", {
     y: 32,
     skewY: 0,
   });
+  // Customer experiences rating platform cards
+  waveReveal(".gsap-cx-platform-cards", ".gsap-platform-card", {
+    y: 40,
+    skewY: 0,
+  });
+  // Customer experiences stats band
+  revealGroup(".gsap-cx-stat-item", { y: 24, duration: 0.7 });
+
   waveReveal(".how-we-works .row.gy-4", ":scope > div");
-  waveReveal(".testimonial-swiper .swiper-wrapper", ":scope > .swiper-slide");
+  waveReveal(".blogs > .container > .row.gy-4", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
+  waveReveal(".photos > .container > .row.gy-4", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
   waveReveal(".blogs .col-lg-7 > .d-flex", ":scope > article");
   pinBlogIntro();
+  pinRecentBlogs();
 
-  // Text anim — letters wave in
+  // ---- Detail pages ----
+  revealGroup(".blog-detail .blog-content", { y: 32, duration: 0.8 });
+  revealGroup(".blog-detail .recent-blogs", { x: 32, y: 0, duration: 0.8 });
+
+  // ---- Contact page ----
+  revealGroup(".gsap-contact-form-cols", { y: 32, duration: 0.8 });
+  waveReveal(".contact-form .d-flex.flex-column.gap-4", ":scope > .consulation", {
+    y: 40,
+    skewY: 0,
+  });
+  revealGroup(".studio-location .map-container", { scale: 0.96, y: 0 });
+  waveReveal(".studio-location .our-locations", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
+
+  // ---- Text anim — letters wave in ----
   waveTextReveal(".text-anim .anim-txt");
 
-  // Studio tour
+  // ---- Studio tour ----
   revealGroup(".tour-video-container", { scale: 0.96, y: 0 });
 
-  // Customer experiences intro / contact handles
+  // ---- Customer experiences intro / contact handles ----
   revealGroup(".contact-us .social-handles > li", { y: 24, duration: 0.6 });
 
-  // FAQs
+  // ---- FAQs ----
   revealGroup(".faqs .accordion-item", { y: 24 });
   revealGroup(".faqs .faq-visual > img", { scale: 0.94, y: 0 });
 
-  // Fullwidth CTA
+  // ---- Fullwidth CTA ----
   revealGroup(".fullwidth-cta .wrapper", { x: -32, y: 0 });
   revealGroup(".fullwidth-cta .col-lg-4", { x: 32, y: 0 });
 
-  // Keep footer content immediately available on small screens. The footer is
-  // often reached by a short touch scroll before ScrollTrigger can refresh.
+  // ---- Footer (desktop only — avoid cutting off mobile quick scroll) ----
   if (window.matchMedia("(min-width: 768px)").matches) {
     revealGroup(".footer .footer-inner > div", { y: 24, duration: 0.7 });
   }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog | AutoShine</title>
+    <title>Vidoes | AutoShine</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css" />
     <!-- App CSS -->
     <link rel="stylesheet" href="src/css/bootstrap-override.css" />
     <link rel="stylesheet" href="src/css/main.css" />
@@ -213,8 +215,8 @@
             <div class="container position-relative py-4 py-lg-5">
                 <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
                     class="subpage-banner-img img-fluid w-100">
-                <h1>Blog</h1>
-                <p>Explore practical car care advice, detailing insights, and the latest from AutoShine.</p>
+                <h1>Photos</h1>
+                <p>Showcasing Precision in Every Detail.</p>
                 <div class="breadcrumb">
                     <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
                         <li>
@@ -225,327 +227,172 @@
                         </li>
                         <ion-icon name="chevron-forward"></ion-icon>
                         <li>
-                            Blog
+                            <a href="portfolio.html"
+                                class="text-decoration-none d-flex align-items-center gap-2">Portfolio</a>
+                        </li>
+                        <ion-icon name="chevron-forward"></ion-icon>
+                        <li>
+                            Photos
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="section blogs" id="blogs">
+        <!-- Photos -->
+        <section class="section photos" id="photos">
             <div class="container py-4 py-lg-5">
                 <div class="row filters gy-3 gy-lg-0 mb-4">
-                    <div class="position-relative col-sm-12 col-md-6 col-lg-3">
-                        <input type="text" name="search" id="blog-search" placeholder="Search Blog..."
-                            class="form-control pe-4">
-                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    <div class="col-sm-12 col-lg-6">
+                        Showing 1–9 of 15 results
                     </div>
-                    <div class="position-relative col-sm-12 col-md-6 col-lg-3">
-                        <select name="category" id="blog-category" class="form-control pe-4">
-                            <option value="default">All Categories</option>
-                            <option value="exterior">Exterior Care</option>
-                            <option value="protection">Paint Protection</option>
-                            <option value="interior">Interior Care</option>
-                            <option value="maintenance">Maintenance</option>
-                        </select>
-                        <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
-                    </div>
-                    <div class="position-relative col-sm-12 col-md-6 col-lg-3">
-                        <select name="sort" id="blog-sort" class="form-control pe-4">
+                    <div class="position-relative col-sm-12 col-lg-6">
+                        <select name="sort" id="sort" class="sorting form-control pe-4">
                             <option value="default">Default</option>
                             <option value="newest">Newest</option>
                             <option value="oldest">Oldest</option>
                         </select>
                         <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div class="d-flex align-items-center gap-3 h-100">
-                            <button class="btn btn-primary" type="button" id="apply-blog-filters">
-                                <span>Apply Filter</span>
-                            </button>
-                            <button class="btn btn-primary" type="button" id="reset-blog-filters">
-                                <span>Reset</span>
-                            </button>
-                        </div>
-                    </div>
                 </div>
                 <div class="row gy-4">
-                    <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="thumbnail">
-                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
-                                            alt="Red Car" />
-                                    </div>
-                                </div>
-                                <div class="col-8 py-3">
-                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
-                                        <div class="profile-pic">
-                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                                                alt="Author Profile Pic" />
-                                        </div>
-                                        <p class="mb-0">
-                                            Written by <span class="text-black">Admin</span>
-                                        </p>
-                                    </div>
-                                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                                        <h5 class="mb-0">Why Your Cars Need Regular Detailing</h5>
-                                    </a>
-                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 25, 2026
-                                        </li>
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="time"></ion-icon>8 min
-                                            read
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/surface-refinement.jpg" height="280" width="500"
+                                    alt="Precision Surface Refinement" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/surface-refinement.jpg" data-gallery="autoshine-media" aria-label="Open Precision Surface Refinement">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Precision Surface Refinement</h4>
+                                <p class="text-primary mb-0">Paint Correction</p>
                             </div>
                         </article>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="thumbnail">
-                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
-                                            alt="Red Car" />
-                                    </div>
-                                </div>
-                                <div class="col-8 py-3">
-                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
-                                        <div class="profile-pic">
-                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                                                alt="Author Profile Pic" />
-                                        </div>
-                                        <p class="mb-0">
-                                            Written by <span class="text-black">Admin</span>
-                                        </p>
-                                    </div>
-                                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                                        <h5 class="mb-0">PPF or Ceramic Coating?</h5>
-                                    </a>
-                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 26, 2026
-                                        </li>
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="time"></ion-icon> 15
-                                            min read
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/interior-detailing.jpg" height="280" width="500"
+                                    alt="Interior Detailing Excellence" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/interior-detailing.jpg" data-gallery="autoshine-media" aria-label="Open Interior Detailing Excellence">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Interior Detailing Excellence</h4>
+                                <p class="text-primary mb-0">Interior Care</p>
                             </div>
                         </article>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="thumbnail">
-                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
-                                            alt="Red Car" />
-                                    </div>
-                                </div>
-                                <div class="col-8 py-3">
-                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
-                                        <div class="profile-pic">
-                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                                                alt="Author Profile Pic" />
-                                        </div>
-                                        <p class="mb-0">
-                                            Written by <span class="text-black">Admin</span>
-                                        </p>
-                                    </div>
-                                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                                        <h5 class="mb-0">The Five-Minute Interior Reset</h5>
-                                    </a>
-                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 27, 2026
-                                        </li>
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="time"></ion-icon>10
-                                            min read
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/client-experience.jpg" height="280" width="500"
+                                    alt="Client Experience & Consultation" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/client-experience.jpg" data-gallery="autoshine-media" aria-label="Open Client Experience and Consultation">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Client Experience & Consultation</h4>
+                                <p class="text-primary mb-0">Consultation</p>
                             </div>
                         </article>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="thumbnail">
-                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
-                                            alt="Red Car" />
-                                    </div>
-                                </div>
-                                <div class="col-8 py-3">
-                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
-                                        <div class="profile-pic">
-                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                                                alt="Author Profile Pic" />
-                                        </div>
-                                        <p class="mb-0">
-                                            Written by <span class="text-black">Admin</span>
-                                        </p>
-                                    </div>
-                                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                                        <h5 class="mb-0">How to Protect Your Paint Between Details</h5>
-                                    </a>
-                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 28, 2026
-                                        </li>
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="time"></ion-icon>7 min read
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/paint-enhancement.jpg" height="280" width="500"
+                                    alt="Advance Paint Enhancement" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/paint-enhancement.jpg" data-gallery="autoshine-media" aria-label="Open Advance Paint Enhancement">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Advance Paint Enhancement</h4>
+                                <p class="text-primary mb-0">Surface Protection</p>
                             </div>
                         </article>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="thumbnail">
-                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
-                                            alt="Red Car" />
-                                    </div>
-                                </div>
-                                <div class="col-8 py-3">
-                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
-                                        <div class="profile-pic">
-                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                                                alt="Author Profile Pic" />
-                                        </div>
-                                        <p class="mb-0">
-                                            Written by <span class="text-black">Admin</span>
-                                        </p>
-                                    </div>
-                                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                                        <h5 class="mb-0">A Simple Guide to Cleaner Wheels</h5>
-                                    </a>
-                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 29, 2026
-                                        </li>
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="time"></ion-icon>6 min read
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/premium-finish-protection.jpg" height="280" width="500"
+                                    alt="Premium Finish Protection" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/premium-finish-protection.jpg" data-gallery="autoshine-media" aria-label="Open Premium Finish Protection">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Premium Finish Protection</h4>
+                                <p class="text-primary mb-0">Ceramic Coating</p>
                             </div>
                         </article>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="thumbnail">
-                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
-                                            alt="Red Car" />
-                                    </div>
-                                </div>
-                                <div class="col-8 py-3">
-                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
-                                        <div class="profile-pic">
-                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                                                alt="Author Profile Pic" />
-                                        </div>
-                                        <p class="mb-0">
-                                            Written by <span class="text-black">Admin</span>
-                                        </p>
-                                    </div>
-                                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                                        <h5 class="mb-0">Interior Care Tips for Busy Drivers</h5>
-                                    </a>
-                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 30, 2026
-                                        </li>
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="time"></ion-icon>9 min read
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/premium-finish-detailing.jpg" height="280" width="500"
+                                    alt="Premium Finish Detailing" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/premium-finish-detailing.jpg" data-gallery="autoshine-media" aria-label="Open Premium Finish Detailing">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Premium Finish Detailing</h4>
+                                <p class="text-primary mb-0">Ceramic Coating</p>
                             </div>
                         </article>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="thumbnail">
-                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
-                                            alt="Red Car" />
-                                    </div>
-                                </div>
-                                <div class="col-8 py-3">
-                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
-                                        <div class="profile-pic">
-                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                                                alt="Author Profile Pic" />
-                                        </div>
-                                        <p class="mb-0">
-                                            Written by <span class="text-black">Admin</span>
-                                        </p>
-                                    </div>
-                                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                                        <h5 class="mb-0">When Should You Book a Full Detail?</h5>
-                                    </a>
-                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>January 31, 2026
-                                        </li>
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="time"></ion-icon>8 min read
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/suspension-and-underbody.jpg" height="280" width="500"
+                                    alt="Suspension & Underbody Care" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/suspension-and-underbody.jpg" data-gallery="autoshine-media" aria-label="Open Suspension and Underbody Care">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Suspension & Underbody Care</h4>
+                                <p class="text-primary mb-0">Underbody Care</p>
                             </div>
                         </article>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="thumbnail">
-                                        <img src="public/images/car-red.png" class="img-fluid thumbnail"
-                                            alt="Red Car" />
-                                    </div>
-                                </div>
-                                <div class="col-8 py-3">
-                                    <div class="author-info d-flex align-items-center gap-2 mb-2">
-                                        <div class="profile-pic">
-                                            <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                                                alt="Author Profile Pic" />
-                                        </div>
-                                        <p class="mb-0">
-                                            Written by <span class="text-black">Admin</span>
-                                        </p>
-                                    </div>
-                                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                                        <h5 class="mb-0">Rainy Season Car Care Essentials</h5>
-                                    </a>
-                                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="calendar"></ion-icon>February 1, 2026
-                                        </li>
-                                        <li class="d-flex align-items-center">
-                                            <ion-icon class="icon me-1" name="time"></ion-icon>6 min read
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/client-experience.jpg" height="280" width="500"
+                                    alt="Red Vehicle Exterior Finish" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/client-experience.jpg" data-gallery="autoshine-media" aria-label="Open Red Vehicle Exterior Finish">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Red Vehicle Exterior Finish</h4>
+                                <p class="text-primary mb-0">Exterior Detailing</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/surface-refinement.jpg" height="280" width="500"
+                                    alt="Executive Vehicle Care" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/surface-refinement.jpg" data-gallery="autoshine-media" aria-label="Open Executive Vehicle Care">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Executive Vehicle Care</h4>
+                                <p class="text-primary mb-0">Premium Finish</p>
                             </div>
                         </article>
                     </div>
                 </div>
+
                 <div class="pagination justify-content-center gap-2 mt-4">
                     <button class="btn btn-primary">
                         <span>Prev</span>
@@ -823,6 +670,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- CountUp JS -->
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.9.0/dist/countUp.umd.js"></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
     <!-- Main JS -->
     <script type="module" src="src/js/main.js"></script>
 </body>

@@ -115,12 +115,12 @@
                                     name="pricetag"></ion-icon>Customer Experience</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link rounded-1 dropdown-toggle" href="portfolio.html" role="button"
+                            <a class="nav-link rounded-1 dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false"><ion-icon
                                     name="people"></ion-icon>Portfolio</a>
                             <ul class="dropdown-menu px-2">
-                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#photos">Photos</a></li>
-                                <li><a class="rounded-1 dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                                <li><a class="rounded-1 dropdown-item" href="photos.html">Photos</a></li>
+                                <li><a class="rounded-1 dropdown-item" href="videos.html">Videos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -166,11 +166,11 @@
                             <a class="nav-link" href="customer-experience.html">Customer Experience</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="portfolio.html" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
                             <ul class="dropdown-menu px-2">
-                                <li><a class="dropdown-item" href="portfolio.html#photos">Photos</a></li>
-                                <li><a class="dropdown-item" href="portfolio.html#videos">Videos</a></li>
+                                <li><a class="dropdown-item" href="photos.html">Photos</a></li>
+                                <li><a class="dropdown-item" href="videos.html">Videos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -208,6 +208,7 @@
     </header>
 
     <main class="main" id="main">
+        <!-- Subpage Banner -->
         <section class="section subpage-banner" id="subpage-banner">
             <div class="container position-relative py-4 py-lg-5">
                 <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
@@ -224,13 +225,195 @@
                         </li>
                         <ion-icon name="chevron-forward"></ion-icon>
                         <li>
+                            <a href="about.html" class="text-decoration-none d-flex align-items-center gap-2">About</a>
+                        </li>
+                        <ion-icon name="chevron-forward"></ion-icon>
+                        <li>
                             FAQs
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-        
+
+        <section class="section faqs" id="faqs">
+            <div class="container py-4 py-lg-5">
+                <div class="section-header text-center mb-4 mb-lg-4">
+                    <h2 class="d-inline-block position-relative pb-2">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="mb-0">
+                        Find answers to common questions about our services, booking
+                        process, products, and vehicle care recommendations.
+                    </p>
+                </div>
+                <div class="row gy-4 gy-lg-0">
+                    <div class="col-md-6">
+                        <div class="accordion d-flex flex-column gap-4" id="siteAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How do I get started with a service?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#siteAccordion">
+                                    <div class="accordion-body">
+                                        Simply choose your preferred service, select a suitable
+                                        time and confirm your booking. From there, our team takes
+                                        over - ensuring a smooth, well-coordinated experience from
+                                        start to finish.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Do I need to book in advance, or can I walk in?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#siteAccordion">
+                                    <div class="accordion-body">
+                                        While walk-ins are always welcome, scheduling in advance
+                                        ensures dedicated attention, minimal wait time and a more
+                                        personalized service experience.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How much time should I expect for the service?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#siteAccordion">
+                                    <div class="accordion-body">
+                                        It depends on the level of detailing selected. Quick
+                                        enhancements take a few hours, while deeper correction and
+                                        protection treatments are carefully carried out over
+                                        extended durations for flawless results.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        What makes your products and process different?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#siteAccordion">
+                                    <div class="accordion-body">
+                                        We work with premium-grade formulations and refined
+                                        techniques that prioritize surface safety, finish quality
+                                        and long-term protection - delivering results that truly
+                                        stand apart.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        Can I tailor the service to my specific needs?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#siteAccordion">
+                                    <div class="accordion-body">
+                                        Absolutely. Every vehicle is different, and so is our
+                                        approach. You can customize services to match your
+                                        expectations, whether it’s focused detailing or complete
+                                        surface transformation.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        How long will the results actually last?
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse"
+                                    data-bs-parent="#siteAccordion">
+                                    <div class="accordion-body">
+                                        Longevity varies based on the service chosen and
+                                        aftercare. Our advanced treatments are designed to deliver
+                                        lasting protection and sustained visual appeal when
+                                        properly maintained.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        What payment options are available?
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                    data-bs-parent="#siteAccordion">
+                                    <div class="accordion-body">
+                                        We support major cards and convenient payment methods, all
+                                        presented clearly during booking for a smooth and
+                                        transparent checkout experience.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        Is there any assurance or guarantee on the service?
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse"
+                                    data-bs-parent="#siteAccordion">
+                                    <div class="accordion-body">
+                                        Yes, selected services come with service assurance,
+                                        reflecting our confidence in quality and our commitment to
+                                        delivering results you can rely on.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="faq-visual position-relative h-100">
+                            <img src="public/images/faq-bg.png" class="img-fluid w-100 h-100 rounded-1"
+                                alt="Red car prepared for professional detailing" />
+                            <div class="faq-visual-caption position-absolute bottom-0 start-0 m-3 m-lg-4 p-4 rounded-1">
+                                <p class="text-xs text-uppercase tracking-wide text-primary mb-1">
+                                    Still unsure?
+                                </p>
+                                <h3 class="h5 text-black mb-2">
+                                    Tell us what your car needs.
+                                </h3>
+                                <p class="text-sm mb-3">
+                                    We will recommend the right service for its condition,
+                                    finish, and everyday use.
+                                </p>
+                                <a href="contact.html" class="btn btn-primary btn-sm"><span>Talk to our team
+                                        <ion-icon class="ms-1" name="arrow-forward"></ion-icon></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Fullwidth CTA -->
         <section class="section fullwidth-cta" id="fullwidth-cta">
             <div class="container py-4 py-lg-0">
@@ -360,10 +543,6 @@
                             <a href="customer-experience.html"><ion-icon class="icon"
                                     name="arrow-forward"></ion-icon>Customer
                                 Experience</a>
-                        </li>
-                        <li>
-                            <a href="portfolio.html"><ion-icon class="icon"
-                                    name="arrow-forward"></ion-icon>Portfolio</a>
                         </li>
                         <li>
                             <a href="blog.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Blog</a>

@@ -5,8 +5,14 @@
 // Initialize a new Lenis instance for smooth scrolling
 export function initLenis() {
   const lenis = new Lenis({
-    lerp: 0.05,
+    // 0.08 is the sweet spot: snappy enough to feel responsive,
+    // smooth enough to feel premium — 0.05 felt too floaty/laggy.
+    lerp: 0.08,
     smoothWheel: true,
+    // Exponential ease-out for silky, natural deceleration
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    wheelMultiplier: 1,
+    touchMultiplier: 1.5,
   });
 
   // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
@@ -358,6 +364,179 @@ export function initTextHoverAnimation() {
         },
       });
     });
+  });
+}
+
+// Initialize the subtle perspective effect on team member cards
+export function initTeamCardTilt() {
+  if (typeof VanillaTilt === "undefined") return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const teamCards = document.querySelectorAll(".team .card.team");
+  if (!teamCards.length) return;
+
+  VanillaTilt.init(teamCards, {
+    max: 8,
+    speed: 500,
+    scale: 1.02,
+    glare: true,
+    "max-glare": 0.15,
+    gyroscope: false,
+  });
+}
+
+// Initialize GLightbox for photo and video media
+export function initMediaLightbox() {
+  if (typeof GLightbox === "undefined") return;
+  if (!document.querySelector(".glightbox")) return;
+
+  GLightbox({
+    selector: ".glightbox",
+    touchNavigation: true,
+    loop: true,
+  });
+}
+
+// Filter Career listings from the search bar and sidebar controls
+export function initJobFilters() {
+  const careerSection = document.querySelector(".careers");
+  if (!careerSection) return;
+
+  const searchInput = careerSection.querySelector("#search-job");
+  const countrySelect = careerSection.querySelector("#country");
+  const typeSelect = careerSection.querySelector("#job-type");
+  const applyButton = careerSection.querySelector("#apply-job-filters");
+  const resetButton = careerSection.querySelector("#reset-job-filters");
+  const cards = [...careerSection.querySelectorAll(".card.job")];
+  const sidebar = careerSection.querySelector(".job-filters");
+
+  if (!searchInput || !countrySelect || !typeSelect || !applyButton || !resetButton || !cards.length) return;
+
+  const emptyState = document.createElement("p");
+  emptyState.className = "job-filter-empty text-center py-4 mb-0";
+  emptyState.textContent = "No roles match these filters yet. Try a broader search.";
+  emptyState.hidden = true;
+  careerSection.querySelector(".job-layout")?.append(emptyState);
+
+  const getChecked = (name) =>
+    [...(sidebar?.querySelectorAll(`input[name="${name}"]:checked`) || [])].map(
+      (input) => input.value,
+    );
+
+  function applyFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+    const country = countrySelect.value;
+    const type = typeSelect.value;
+    const roles = getChecked("role");
+    const experiences = getChecked("experience");
+    const locations = getChecked("location");
+    let visibleCards = 0;
+
+    cards.forEach((card) => {
+      const matchesSearch = !query || card.textContent.toLowerCase().includes(query);
+      const matchesCountry = country === "default" || card.dataset.location === country;
+      const matchesType = type === "default" || card.dataset.type === type;
+      const matchesRole = !roles.length || roles.includes(card.dataset.role);
+      const matchesExperience = !experiences.length || experiences.includes(card.dataset.experience);
+      const matchesLocation = !locations.length || locations.includes(card.dataset.location);
+      const isVisible = matchesSearch && matchesCountry && matchesType && matchesRole && matchesExperience && matchesLocation;
+
+      card.hidden = !isVisible;
+      if (isVisible) visibleCards += 1;
+    });
+
+    emptyState.hidden = visibleCards > 0;
+  }
+
+  function resetFilters() {
+    searchInput.value = "";
+    countrySelect.value = "default";
+    typeSelect.value = "default";
+    sidebar?.querySelectorAll("input[type=checkbox]").forEach((input) => {
+      input.checked = false;
+    });
+    applyFilters();
+  }
+
+  applyButton.addEventListener("click", applyFilters);
+  resetButton.addEventListener("click", resetFilters);
+  searchInput.addEventListener("search", applyFilters);
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") applyFilters();
+  });
+  sidebar?.querySelectorAll("input[type=checkbox]").forEach((input) => {
+    input.addEventListener("change", applyFilters);
+  });
+}
+
+// Filter and sort Blog cards from the top controls
+export function initBlogFilters() {
+  const blogSection = document.querySelector(".blogs");
+  if (!blogSection || !document.querySelector("#blog-search")) return;
+
+  const searchInput = blogSection.querySelector("#blog-search");
+  const categorySelect = blogSection.querySelector("#blog-category");
+  const sortSelect = blogSection.querySelector("#blog-sort");
+  const applyButton = blogSection.querySelector("#apply-blog-filters");
+  const resetButton = blogSection.querySelector("#reset-blog-filters");
+  const grid = blogSection.querySelector(".row.gy-4");
+  const cards = [...(grid?.querySelectorAll(":scope > div") || [])];
+  if (!searchInput || !categorySelect || !sortSelect || !applyButton || !resetButton || !grid || !cards.length) return;
+
+  const emptyState = document.createElement("p");
+  emptyState.className = "blog-filter-empty text-center py-4 mb-0";
+  emptyState.textContent = "No articles match these filters yet. Try a broader search.";
+  emptyState.hidden = true;
+  grid.after(emptyState);
+
+  const getCategory = (card) => {
+    const text = card.textContent.toLowerCase();
+    if (text.includes("ppf") || text.includes("ceramic") || text.includes("paint")) return "protection";
+    if (text.includes("interior")) return "interior";
+    if (text.includes("rainy") || text.includes("regular") || text.includes("full detail")) return "maintenance";
+    return "exterior";
+  };
+
+  const getDate = (card) => {
+    const dateText = card.querySelector(".meta-info li")?.textContent.trim() || "";
+    return Date.parse(dateText.replace(/^[^A-Za-z]*/, "")) || 0;
+  };
+
+  function applyFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+    const category = categorySelect.value;
+    const sort = sortSelect.value;
+    const matchingCards = cards.filter((card) => {
+      const matchesSearch = !query || card.textContent.toLowerCase().includes(query);
+      const matchesCategory = category === "default" || getCategory(card) === category;
+      return matchesSearch && matchesCategory;
+    });
+
+    matchingCards.sort((first, second) => {
+      if (sort === "newest") return getDate(second) - getDate(first);
+      if (sort === "oldest") return getDate(first) - getDate(second);
+      return cards.indexOf(first) - cards.indexOf(second);
+    });
+
+    cards.forEach((card) => {
+      card.hidden = !matchingCards.includes(card);
+    });
+    matchingCards.forEach((card) => grid.append(card));
+    emptyState.hidden = matchingCards.length > 0;
+  }
+
+  function resetFilters() {
+    searchInput.value = "";
+    categorySelect.value = "default";
+    sortSelect.value = "default";
+    applyFilters();
+  }
+
+  applyButton.addEventListener("click", applyFilters);
+  resetButton.addEventListener("click", resetFilters);
+  searchInput.addEventListener("search", applyFilters);
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") applyFilters();
   });
 }
 

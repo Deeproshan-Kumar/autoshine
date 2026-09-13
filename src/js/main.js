@@ -15,12 +15,20 @@ import {
   initCopyButtons,
   initScrollToTop,
   initTextHoverAnimation,
+  initTeamCardTilt,
+  initMediaLightbox,
+  initJobFilters,
+  initBlogFilters,
   initWhatsappWidget,
 } from "./init.js";
 import { toggleTheme } from "./toggleTheme.js";
 import { initPageTransition } from "./pageTransition.js";
 import { initScrollAnimations } from "./scrollAnimations.js";
 import { initHeroIntro } from "./heroIntro.js";
+import {
+  initBeforeAfterSliders,
+  initCategoryFilters,
+} from "./beforeAfterSlider.js";
 
 // Mobile Menu
 function handleMobileMenu(navbarToggler, target) {
@@ -99,6 +107,18 @@ window.addEventListener("DOMContentLoaded", () => {
   // Text anim
   initTextHoverAnimation();
 
+  // Team card tilt
+  initTeamCardTilt();
+
+  // Photo and video lightbox
+  initMediaLightbox();
+
+  // Career filters
+  initJobFilters();
+
+  // Blog filters
+  initBlogFilters();
+
   // Build the header/hero reveal now — paused, but its .from() tweens hide
   // those elements immediately so nothing flashes visible under the overlay
   const heroIntroTl = initHeroIntro();
@@ -151,4 +171,8 @@ window.addEventListener("DOMContentLoaded", () => {
     whatsappChatPopup,
     launchWhatsappTrigger,
   );
+
+  // Before and after image slider & category filters
+  initBeforeAfterSliders();
+  initCategoryFilters();
 });

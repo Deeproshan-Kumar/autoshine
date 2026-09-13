@@ -105,7 +105,7 @@
   .map-container {
     padding-bottom: 0;
   }
-  
+
   .map-container iframe {
     height: 14rem;
   }
@@ -124,6 +124,14 @@
 
   .blogs-intro {
     align-self: auto;
+  }
+
+  .career-header .row {
+    gap: 1rem;
+  }
+
+  .job-layout {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -182,6 +190,36 @@
   .service-statistics {
     margin-right: auto;
     max-height: 8rem;
+  }
+
+  .career-header .row > div,
+  .career-header .row > div:last-child .d-flex {
+    width: 100%;
+  }
+
+  .career-header .row > div:last-child .d-flex {
+    justify-content: stretch;
+  }
+
+  .career-header .row > div:last-child button {
+    flex: 1;
+  }
+
+  .careers > .container > .row {
+    display: block;
+  }
+
+  .careers > .container > .row > .col-3,
+  .careers > .container > .row > .col-9 {
+    width: 100%;
+  }
+
+  .job-filters {
+    margin-bottom: 1.5rem;
+  }
+
+  .job-layout {
+    grid-template-columns: 1fr;
   }
 }
 

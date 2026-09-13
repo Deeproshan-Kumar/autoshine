@@ -229,6 +229,111 @@ export function initScrollAnimations() {
   // Customer experiences stats band
   revealGroup(".gsap-cx-stat-item", { y: 24, duration: 0.7 });
 
+  // ---- Customer Experience page ----
+  // 1. Hero Section (#ce-hero)
+  const ceHero = document.querySelector("#ce-hero");
+  if (ceHero) {
+    const heroImg = ceHero.querySelector(".col-lg-6:first-child img");
+    const heroContent = ceHero.querySelector(".col-lg-6:last-child");
+    const heroItems = heroContent ? heroContent.children : [];
+
+    if (heroImg) {
+      gsap.from(heroImg, {
+        x: -60,
+        opacity: 0,
+        scale: 0.92,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ceHero,
+          start: "top 85%",
+          toggleActions: "restart reverse restart reverse",
+        },
+      });
+    }
+
+    if (heroItems.length) {
+      gsap.from(heroItems, {
+        x: 50,
+        opacity: 0,
+        duration: 0.85,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ceHero,
+          start: "top 85%",
+          toggleActions: "restart reverse restart reverse",
+        },
+      });
+    }
+  }
+
+  // 2. The Difference Is in the Details (#before-after)
+  const beforeAfterSection = document.querySelector("#before-after");
+  if (beforeAfterSection) {
+    const baFilterBtns = beforeAfterSection.querySelectorAll(".ba-filter-group .ba-filter-btn");
+
+    if (baFilterBtns.length) {
+      gsap.from(baFilterBtns, {
+        y: 25,
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.6,
+        stagger: 0.05,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: beforeAfterSection.querySelector(".ba-filter-group"),
+          start: "top 88%",
+          toggleActions: "restart reverse restart reverse",
+        },
+      });
+    }
+  }
+
+  // 3. A Look Inside Our Work (#our-works) — Stagger-like grid
+  const ourWorksSection = document.querySelector("#our-works");
+  if (ourWorksSection) {
+    const worksImages = ourWorksSection.querySelectorAll(".masonary-grid img");
+    const worksBtns = ourWorksSection.querySelectorAll(".d-flex .btn");
+
+    if (worksImages.length) {
+      gsap.from(worksImages, {
+        y: 80,
+        opacity: 0,
+        scale: 0.85,
+        rotation: 2,
+        skewY: 2,
+        duration: 0.85,
+        ease: "power3.out",
+        stagger: {
+          each: 0.08,
+          from: "start",
+          ease: "sine.out",
+        },
+        scrollTrigger: {
+          trigger: ourWorksSection.querySelector(".masonary-grid"),
+          start: "top 82%",
+          toggleActions: "restart reverse restart reverse",
+        },
+      });
+    }
+
+    if (worksBtns.length) {
+      gsap.from(worksBtns, {
+        y: 30,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ourWorksSection.querySelector(".d-flex"),
+          start: "top 90%",
+          toggleActions: "restart reverse restart reverse",
+        },
+      });
+    }
+  }
+
   waveReveal(".how-we-works .row.gy-4", ":scope > div");
   waveReveal(".blogs > .container > .row.gy-4", ":scope > div", {
     y: 48,
@@ -242,7 +347,7 @@ export function initScrollAnimations() {
   pinBlogIntro();
   pinRecentBlogs();
 
-  // ---- Detail pages ----
+  // ---- Blog Detail page ----
   revealGroup(".blog-detail .blog-content", { y: 32, duration: 0.8 });
   revealGroup(".blog-detail .recent-blogs", { x: 32, y: 0, duration: 0.8 });
 

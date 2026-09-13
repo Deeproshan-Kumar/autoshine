@@ -166,6 +166,11 @@ export function initCategoryFilters() {
           }, 300);
         }
       });
+
+      // Refresh ScrollTrigger so layout height shifts don't throw off triggers
+      if (typeof ScrollTrigger !== "undefined") {
+        setTimeout(() => ScrollTrigger.refresh(), 350);
+      }
     });
   });
 }

@@ -1540,6 +1540,22 @@ input[type='radio'] {
   font-weight: 600;
 }
 
+.masonary-grid {
+  column-count: 4;
+  column-gap: 1.2rem;
+}
+
+.masonary-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1.2rem;
+  break-inside: avoid;
+  border-radius: 0.25rem;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
 /* FAQs */
 .faq-visual {
   min-height: 100%;
